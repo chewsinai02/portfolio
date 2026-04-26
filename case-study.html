@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Architect.Dev | Private Project Case Study</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Space+Grotesk:wght@400;500;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed-variant": "#005236",
+                        "secondary-fixed-dim": "#4edea3",
+                        "inverse-on-surface": "#283044",
+                        "on-secondary": "#003824",
+                        "on-tertiary-fixed": "#07006c",
+                        "on-tertiary": "#1000a9",
+                        "surface-container-low": "#131b2e",
+                        "primary-fixed": "#c4e7ff",
+                        "surface": "#0b1326",
+                        "error-container": "#93000a",
+                        "surface-variant": "#2d3449",
+                        "surface-container-highest": "#2d3449",
+                        "on-background": "#dae2fd",
+                        "secondary-fixed": "#6ffbbe",
+                        "surface-container": "#171f33",
+                        "on-tertiary-fixed-variant": "#2f2ebe",
+                        "on-surface": "#dae2fd",
+                        "inverse-primary": "#00668a",
+                        "on-primary-fixed-variant": "#004c69",
+                        "secondary": "#4edea3",
+                        "on-primary-container": "#004965",
+                        "tertiary-container": "#a7a9ff",
+                        "surface-container-lowest": "#060e20",
+                        "tertiary": "#c7c8ff",
+                        "surface-dim": "#0b1326",
+                        "on-primary-fixed": "#001e2c",
+                        "outline-variant": "#3e484f",
+                        "error": "#ffb4ab",
+                        "outline": "#87929a",
+                        "background": "#0b1326",
+                        "inverse-surface": "#dae2fd",
+                        "on-error": "#690005",
+                        "surface-tint": "#7bd0ff",
+                        "secondary-container": "#00a572",
+                        "surface-container-high": "#222a3d",
+                        "primary": "#8ed5ff",
+                        "on-error-container": "#ffdad6",
+                        "primary-container": "#38bdf8",
+                        "on-surface-variant": "#bdc8d1",
+                        "on-secondary-container": "#00311f",
+                        "on-secondary-fixed": "#002113",
+                        "on-tertiary-container": "#2b29bb",
+                        "tertiary-fixed": "#e1e0ff",
+                        "on-primary": "#00354a",
+                        "surface-bright": "#31394d",
+                        "primary-fixed-dim": "#7bd0ff",
+                        "tertiary-fixed-dim": "#c0c1ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "base": "4px",
+                        "md": "24px",
+                        "xs": "8px",
+                        "gutter": "24px",
+                        "lg": "48px",
+                        "sm": "16px",
+                        "xl": "80px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "body": ["Inter"],
+                        "code-sm": ["Space Grotesk"],
+                        "h3": ["Manrope"],
+                        "h1": ["Manrope"],
+                        "label-caps": ["Space Grotesk"],
+                        "h2": ["Manrope"],
+                        "manrope": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "body": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "code-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "500"}],
+                        "h3": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "h1": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                        "h2": ["32px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-overlay {
+            backdrop-filter: blur(12px);
+            background-color: rgba(15, 23, 42, 0.7);
+        }
+        .flat-tech-card {
+            background-color: #0F172A;
+            border: 1px solid #1E293B;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+        .flat-tech-card:hover {
+            border-color: #38bdf8;
+            box-shadow: 0 0 15px rgba(56, 189, 248, 0.1);
+        }
+        .diagram-grid {
+            background-image: radial-gradient(circle at 1px 1px, #1E293B 1px, transparent 0);
+            background-size: 40px 40px;
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar Component (from COMPONENTS_18) -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-12 h-16 bg-slate-900/80 backdrop-blur-md border-b border-slate-800">
+<a class="text-xl font-bold tracking-tighter text-slate-50 font-manrope hover:text-sky-200 transition-colors shrink-0" href="index.html">Chew Sin Ai</a>
+<nav class="hidden md:flex items-center gap-md">
+<a class="text-slate-400 hover:text-sky-300 hover:bg-slate-800/50 transition-all px-2 py-1 rounded font-manrope text-sm font-medium tracking-tight active:scale-95 duration-200" href="projects.html">Projects</a>
+<a class="text-sky-400 border-b-2 border-sky-400 pb-1 font-manrope text-sm font-medium tracking-tight" href="case-study.html#overview">Case Studies</a>
+<a class="text-slate-400 hover:text-sky-300 hover:bg-slate-800/50 transition-all px-2 py-1 rounded font-manrope text-sm font-medium tracking-tight active:scale-95 duration-200" href="case-study.html#architecture">Architecture</a>
+<a class="text-slate-400 hover:text-sky-300 hover:bg-slate-800/50 transition-all px-2 py-1 rounded font-manrope text-sm font-medium tracking-tight active:scale-95 duration-200" href="about.html">About</a>
+</nav>
+<div class="flex items-center gap-sm shrink-0">
+<span class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-sky-400 transition-colors">terminal</span>
+<span class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-sky-400 transition-colors">share</span>
+<a class="inline-flex items-center justify-center bg-primary text-on-primary font-label-caps px-md py-xs rounded hover:opacity-90 active:scale-95 transition-all ml-md" href="https://drive.google.com/file/d/1fuY4DvwW3KRiucmMZ1CRulHg6cifS1qi/view?usp=drive_link" rel="noopener noreferrer" target="_blank">Resume</a>
+</div>
+</header>
+<main class="pt-32 max-w-7xl mx-auto px-12">
+<!-- Hero / Project Title -->
+<section class="mb-xl scroll-mt-24" id="overview">
+<div class="flex flex-col gap-xs mb-md">
+<span class="text-label-caps font-label-caps text-secondary uppercase">Case Study 04</span>
+<h1 class="text-h1 font-h1 text-on-surface">Project: Hyperion Core</h1>
+</div>
+<!-- Security Notice Banner -->
+<div class="bg-surface-container-low border-l-4 border-primary p-md flex items-start gap-sm mb-lg">
+<span class="material-symbols-outlined text-primary" data-icon="lock">lock</span>
+<div class="flex flex-col gap-xs">
+<span class="text-label-caps font-label-caps text-primary">Confidentiality Protocol</span>
+<p class="text-body font-body text-on-surface-variant max-w-3xl">High-level architectural overview. Specific proprietary algorithms and internal IP have been generalized. This document focuses on structural transformation and system performance rather than source code.</p>
+</div>
+</div>
+<!-- Bento Grid - Project Meta -->
+<div class="grid grid-cols-12 gap-md h-auto lg:h-[400px]">
+<div class="col-span-12 lg:col-span-8 relative overflow-hidden rounded-lg flat-tech-card group">
+<img alt="Architecture Background" class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-105 transition-transform duration-700" data-alt="Modern high-tech server room with glowing blue neon lights on black equipment racks representing high performance architecture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsm3qAQTujVumIfIif2B1oXZlnbjla9buN2OS9pZOF0fJIDyrluqc2ERRaPAOir8bZaB7UcOaBQaBbDAP2APTDHDz8dNsOX50RAXIZSjvQ88cPrbG5UqAAQ2Ru_SeRn_fCv-WNHIKIW_8FBmm2AGnNua--TVQKEuTKG9dDKC5unZsaHm_oA-DaUhgAohLG_yb_w83ql335K8dTphS5a1vd5k66HUMgZVXxnDEwJdNghy0yGh_8ttSFDlfVMgm2tP8CX5Sl1kDVqLMM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-950 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-lg">
+<h2 class="text-h2 font-h2 mb-sm">The Strategic Problem</h2>
+<p class="text-body font-body text-on-surface-variant max-w-xl">Addressing systemic latency in a global settlement engine. The legacy monolith prevented vertical scaling during high-frequency trading sessions, resulting in significant downstream operational risks.</p>
+</div>
+</div>
+<div class="col-span-12 lg:col-span-4 flex flex-col gap-md">
+<div class="flex-1 p-md flat-tech-card rounded-lg flex flex-col justify-between">
+<span class="text-label-caps font-label-caps text-on-surface-variant">SCOPE</span>
+<span class="text-h3 font-h3 text-on-surface">Enterprise Re-platforming</span>
+</div>
+<div class="flex-1 p-md flat-tech-card rounded-lg flex flex-col justify-between">
+<span class="text-label-caps font-label-caps text-on-surface-variant">ARCHITECTURE MODEL</span>
+<div class="flex flex-wrap gap-xs">
+<span class="bg-slate-800 text-code-sm font-code-sm px-2 py-1">Distributed Mesh</span>
+<span class="bg-slate-800 text-code-sm font-code-sm px-2 py-1">Event-Driven</span>
+<span class="bg-slate-800 text-code-sm font-code-sm px-2 py-1">CQRS</span>
+</div>
+</div>
+<div class="flex-1 p-md flat-tech-card rounded-lg flex flex-col justify-between">
+<span class="text-label-caps font-label-caps text-on-surface-variant">SCALING FACTOR</span>
+<span class="text-h3 font-h3 text-secondary-fixed-dim">10x Concurrent Loads</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Problem Statement -->
+<section class="mb-xl grid grid-cols-1 md:grid-cols-2 gap-lg items-start">
+<div class="flex flex-col gap-md">
+<span class="text-label-caps font-label-caps text-primary">01 / THE PROBLEM</span>
+<h2 class="text-h2 font-h2">Structural Bottlenecks</h2>
+<p class="text-body font-body text-on-surface-variant">The existing infrastructure relied on synchronous request-response cycles across a single database instance. This created a ceiling on performance that no amount of vertical hardware scaling could resolve.</p>
+<ul class="flex flex-col gap-sm">
+<li class="flex items-start gap-sm">
+<span class="material-symbols-outlined text-error shrink-0" data-icon="warning">warning</span>
+<span class="text-body font-body">Global mutex locks on transaction tables causing queue backup.</span>
+</li>
+<li class="flex items-start gap-sm">
+<span class="material-symbols-outlined text-error shrink-0" data-icon="warning">warning</span>
+<span class="text-body font-body">Coupled business logic making independent service scaling impossible.</span>
+</li>
+<li class="flex items-start gap-sm">
+<span class="material-symbols-outlined text-error shrink-0" data-icon="warning">warning</span>
+<span class="text-body font-body">Lack of observability for asynchronous cross-service workflows.</span>
+</li>
+</ul>
+</div>
+<div class="p-lg flat-tech-card rounded-lg bg-surface-container h-full flex flex-col justify-center">
+<div class="mb-md flex justify-between items-center">
+<span class="text-label-caps font-label-caps text-on-surface-variant">LEGACY MONOLITH STATE</span>
+<span class="material-symbols-outlined text-slate-500" data-icon="account_tree">account_tree</span>
+</div>
+<div class="space-y-4">
+<div class="p-4 border border-slate-700 bg-slate-900/30 rounded text-center">
+<div class="text-xs text-slate-500 mb-1">INGRESS</div>
+<div class="font-medium">UNSTRUCTURED API TRAFFIC</div>
+</div>
+<div class="flex justify-center"><span class="material-symbols-outlined text-slate-700" data-icon="arrow_downward">arrow_downward</span></div>
+<div class="p-6 border-2 border-error/30 bg-error/5 rounded text-center">
+<div class="text-xs text-error mb-1 uppercase font-bold tracking-widest">Bottleneck</div>
+<div class="font-medium text-error">SINGLE ORCHESTRATION KERNEL</div>
+</div>
+<div class="flex justify-center"><span class="material-symbols-outlined text-slate-700" data-icon="arrow_downward">arrow_downward</span></div>
+<div class="p-4 border border-slate-700 bg-slate-900/30 rounded text-center">
+<div class="text-xs text-slate-500 mb-1 uppercase font-bold tracking-widest">Shared Fate</div>
+<div class="font-medium">CENTRAL PERSISTENCE LAYER</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Dedicated System Architecture Section -->
+<section class="mb-xl scroll-mt-24" id="architecture">
+<div class="flex flex-col gap-md mb-lg">
+<span class="text-label-caps font-label-caps text-primary">02 / SYSTEM ARCHITECTURE</span>
+<h2 class="text-h2 font-h2">Distributed Event-Driven Topology</h2>
+<p class="text-body font-body text-on-surface-variant max-w-3xl">The solution migrated the core settlement logic into a highly decoupled architecture using a service mesh and a distributed message backbone. This allows for linear scalability and fault isolation across all business domains.</p>
+</div>
+<!-- Large UML / Flow Diagram Placeholder -->
+<div class="w-full aspect-[21/10] bg-surface-container-lowest border border-slate-800 rounded-xl relative overflow-hidden diagram-grid flex items-center justify-center">
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<!-- Stylized SVG abstraction of a diagram -->
+<svg class="w-full h-full opacity-20" fill="none" viewbox="0 0 1000 400" xmlns="http://www.w3.org/2000/svg">
+<path d="M100 200 H900 M300 100 V300 M500 100 V300 M700 100 V300" stroke="#38bdf8" stroke-dasharray="10 10" stroke-width="2"></path>
+<circle cx="100" cy="200" fill="#38bdf8" r="10"></circle>
+<circle cx="900" cy="200" fill="#38bdf8" r="10"></circle>
+<rect fill="#38bdf8" fill-opacity="0.2" height="100" rx="4" stroke="#38bdf8" width="100" x="250" y="150"></rect>
+<rect fill="#38bdf8" fill-opacity="0.2" height="100" rx="4" stroke="#38bdf8" width="100" x="450" y="150"></rect>
+<rect fill="#38bdf8" fill-opacity="0.2" height="100" rx="4" stroke="#38bdf8" width="100" x="650" y="150"></rect>
+</svg>
+</div>
+<!-- Redacted Overlay (Keep the NDA feel but more focus on UML/Architecture) -->
+<div class="relative z-10 glass-overlay p-xl rounded-xl border border-white/10 text-center max-w-2xl mx-gutter">
+<span class="material-symbols-outlined text-primary text-6xl mb-md" data-icon="schema">schema</span>
+<h3 class="text-h3 font-h3 mb-sm">Structural UML Redacted</h3>
+<p class="text-body font-body text-on-surface-variant mb-lg">A detailed UML Sequence and Class Diagram mapping the 14 micro-services and their interaction through the event bus is available for private review. Key components include the Idempotent Gateways, Distributed Sagas, and Real-time Reconciliation Engine.</p>
+<button class="bg-primary text-on-primary font-manrope font-bold px-lg py-3 rounded-lg flex items-center gap-sm mx-auto hover:brightness-110 active:scale-95 transition-all">
+                        Request High-Res Architecture Docs <span class="font-code-sm">→</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-md mt-lg">
+<div class="p-md flat-tech-card rounded-lg">
+<h4 class="text-lg font-bold mb-xs text-primary">Idempotency Layer</h4>
+<p class="text-sm text-on-surface-variant">Eliminated duplicate transaction risk through a global state-aware gateway that rejects re-sent packets at the edge.</p>
+</div>
+<div class="p-md flat-tech-card rounded-lg">
+<h4 class="text-lg font-bold mb-xs text-primary">Distributed Sagas</h4>
+<p class="text-sm text-on-surface-variant">Managed multi-service transactions using the Saga pattern for eventual consistency without blocking operations.</p>
+</div>
+<div class="p-md flat-tech-card rounded-lg">
+<h4 class="text-lg font-bold mb-xs text-primary">Service Mesh</h4>
+<p class="text-sm text-on-surface-variant">Implemented Istio for secure service-to-service communication, mTLS encryption, and advanced traffic steering.</p>
+</div>
+</div>
+</section>
+<!-- Performance Impact Section -->
+<section class="mb-xl">
+<div class="flex flex-col gap-md mb-lg">
+<span class="text-label-caps font-label-caps text-primary">03 / PERFORMANCE IMPACT</span>
+<h2 class="text-h2 font-h2">Architectural Outcomes</h2>
+<p class="text-body font-body text-on-surface-variant">The shift from a monolith to a distributed architecture resulted in measurable gains across reliability, scalability, and developer velocity.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-md">
+<div class="p-md bg-surface-container-high border-t-4 border-secondary rounded-b-lg">
+<span class="text-h1 font-h1 text-secondary">60%</span>
+<p class="text-body font-body text-on-surface mt-sm">P99 Latency Reduction</p>
+</div>
+<div class="p-md bg-surface-container-high border-t-4 border-secondary rounded-b-lg">
+<span class="text-h1 font-h1 text-secondary">4X</span>
+<p class="text-body font-body text-on-surface mt-sm">Peak Throughput Multiplier</p>
+</div>
+<div class="p-md bg-surface-container-high border-t-4 border-secondary rounded-b-lg">
+<span class="text-h1 font-h1 text-secondary">99.99</span>
+<p class="text-body font-body text-on-surface mt-sm">Operational Availability (%)</p>
+</div>
+<div class="p-md bg-surface-container-high border-t-4 border-secondary rounded-b-lg">
+<span class="text-h1 font-h1 text-secondary">100%</span>
+<p class="text-body font-body text-on-surface mt-sm">Data Integrity Match</p>
+</div>
+</div>
+</section>
+<!-- High-Level Takeaways -->
+<section class="p-lg flat-tech-card rounded-lg bg-surface-container-lowest overflow-hidden relative">
+<div class="absolute top-0 right-0 p-lg opacity-10">
+<span class="material-symbols-outlined text-[160px]" data-icon="architecture">architecture</span>
+</div>
+<div class="relative z-10 flex flex-col gap-md">
+<h2 class="text-h2 font-h2">Architectural Philosophy</h2>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-lg">
+<div class="flex flex-col gap-sm">
+<h3 class="text-h3 font-h3 text-primary">State vs. Statelessness</h3>
+<p class="text-body font-body text-on-surface-variant">Moving the burden of state from the compute layer to dedicated persistent event stores allowed for instantaneous container auto-scaling. This fundamentally changed how the system reacts to market volatility.</p>
+</div>
+<div class="flex flex-col gap-sm">
+<h3 class="text-h3 font-h3 text-primary">Isolation of Concerns</h3>
+<p class="text-body font-body text-on-surface-variant">By enforcing strict bounded contexts, the failure of a non-critical micro-service (e.g., reporting) no longer impacts the core settlement flow, providing true system-wide resilience.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Component (from COMPONENTS_18) -->
+<footer class="bg-slate-950 w-full py-12 px-12 flex flex-col md:flex-row justify-between items-center gap-6 mt-20 border-t border-slate-900">
+<a class="text-lg font-black text-slate-50 font-manrope hover:text-sky-300 transition-colors" href="index.html">Chew Sin Ai</a>
+<div class="font-manrope text-xs uppercase tracking-widest text-slate-500">© 2026 Modern Architect Portfolio. Built with Precision.</div>
+<div class="flex gap-8">
+<a class="font-manrope text-xs uppercase tracking-widest text-slate-500 hover:text-sky-400 transition-colors duration-300 opacity-80 hover:opacity-100" href="#">LinkedIn</a>
+<a class="font-manrope text-xs uppercase tracking-widest text-slate-500 hover:text-sky-400 transition-colors duration-300 opacity-80 hover:opacity-100" href="#">GitHub</a>
+<a class="font-manrope text-xs uppercase tracking-widest text-slate-500 hover:text-sky-400 transition-colors duration-300 opacity-80 hover:opacity-100" href="#">Source Code</a>
+<a class="font-manrope text-xs uppercase tracking-widest text-slate-500 hover:text-sky-400 transition-colors duration-300 opacity-80 hover:opacity-100" href="#">Privacy</a>
+</div>
+</footer>
+</body></html>
