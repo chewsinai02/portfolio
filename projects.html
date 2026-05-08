@@ -110,10 +110,6 @@
             border-color: rgba(142, 213, 255, 0.3);
             background: rgba(15, 23, 42, 0.6);
         }
-        .locked-overlay {
-            background: rgba(2, 6, 23, 0.85);
-            backdrop-filter: blur(16px);
-        }
         .tech-badge {
             background: rgba(23, 31, 51, 0.8);
             border: 1px solid rgba(135, 146, 154, 0.2);
@@ -131,8 +127,8 @@
 <a class="text-slate-400 hover:text-sky-300 hover:bg-slate-800/50 transition-all px-2 py-1 rounded font-manrope text-sm font-medium tracking-tight active:scale-95 duration-200" href="about.html">About</a>
 </nav>
 <div class="flex items-center gap-sm shrink-0">
-<span class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-sky-400 transition-colors">terminal</span>
-<span class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-sky-400 transition-colors">share</span>
+<a class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-sky-400 transition-colors no-underline" href="https://github.com/chewsinai02" rel="noopener noreferrer" target="_blank" aria-label="GitHub profile">terminal</a>
+<button type="button" class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-sky-400 transition-colors bg-transparent border-0 p-0 font-inherit" data-copy-page-link="" aria-label="Copy page link">share</button>
 <a class="inline-flex items-center justify-center bg-primary text-on-primary font-label-caps px-md py-xs rounded hover:opacity-90 active:scale-95 transition-all ml-md" href="https://drive.google.com/file/d/1fuY4DvwW3KRiucmMZ1CRulHg6cifS1qi/view?usp=drive_link" rel="noopener noreferrer" target="_blank">Resume</a>
 </div>
 </header>
@@ -147,8 +143,8 @@
 <!-- Projects Grid -->
 <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
 <!-- 1. Patient Care Management (Featured Private Project) -->
-<div class="md:col-span-8 flex flex-col glass-card rounded-lg overflow-hidden group">
-<div class="relative h-72 overflow-hidden">
+<div class="md:col-span-8 flex flex-col glass-card rounded-lg overflow-hidden group border border-slate-800/80">
+<div class="relative h-72 overflow-hidden border-b border-slate-800">
 <img alt="Patient care management system — SUC Hospital web and mobile interfaces" class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" data-alt="SUC Hospital application and website: admin dashboard, messaging, calendar, nurse dashboard, and patient mobile app" src="image.png"/>
 <div class="absolute top-4 left-4 flex gap-xs">
 <span class="bg-slate-900/90 text-sky-400 border border-sky-400/30 font-label-caps px-xs py-1 rounded text-[10px] backdrop-blur-sm">PROPRIETARY ARCHITECTURE</span>
@@ -187,136 +183,149 @@
 </div>
 </div>
 <!-- 2. Pet Adoption System (Public Project) -->
-<div class="md:col-span-4 glass-card rounded-lg flex flex-col group">
-<div class="h-48 overflow-hidden relative">
-<img alt="Pet adoption — domestic cat" class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105" data-alt="Soft portrait of a domestic cat for pet adoption shelter theme" src="https://images.unsplash.com/photo-1574158622682-e40e69881006?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"/>
-<div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-slate-950/80 p-sm">
-<span class="text-tertiary font-label-caps text-[10px] flex items-center gap-1">
-<span class="material-symbols-outlined text-xs">public</span> PUBLIC REPOSITORY
-                        </span>
+<div class="md:col-span-4 glass-card rounded-lg flex flex-col overflow-hidden group border border-slate-800/80">
+<div class="h-32 overflow-hidden relative bg-slate-900 border-b border-slate-800">
+<img alt="Pet adoption — domestic cat" class="absolute inset-0 h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105" data-alt="Soft portrait of a domestic cat for pet adoption shelter theme" src="https://images.unsplash.com/photo-1574158622682-e40e69881006?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/50 to-slate-950/10 pointer-events-none"></div>
+<div class="absolute top-3 left-3 flex flex-wrap gap-xs z-10">
+<span class="bg-slate-950/90 text-secondary font-label-caps px-xs py-1 rounded text-[10px] backdrop-blur-sm border border-secondary/20">JAVA DESKTOP</span>
+<span class="bg-slate-950/90 text-outline font-label-caps px-xs py-1 rounded text-[10px] backdrop-blur-sm border border-slate-700 flex items-center gap-1"><span class="material-symbols-outlined text-[12px]">public</span> PUBLIC</span>
 </div>
 </div>
-<div class="p-md flex flex-col flex-grow">
-<h3 class="font-h3 text-h3 mb-xs text-on-surface">Pet Adoption System</h3>
-<p class="text-on-surface-variant text-body mb-md text-sm">Modular JavaFX application for automated shelter logistics and lifecycle tracking.</p>
-<div class="flex flex-wrap gap-xs mb-lg">
+<div class="py-sm px-md pb-md flex flex-col flex-grow">
+<h3 class="font-h3 text-lg md:text-h3 mb-xs text-on-surface leading-tight">Pet Adoption System</h3>
+<p class="text-on-surface-variant text-sm leading-snug mb-md">Modular JavaFX application for automated shelter logistics and lifecycle tracking.</p>
+<div class="flex flex-wrap gap-xs mb-md">
 <span class="tech-badge text-on-surface font-code-sm text-code-sm px-xs py-1 rounded">JavaFX</span>
 <span class="tech-badge text-on-surface font-code-sm text-code-sm px-xs py-1 rounded">MVC Pattern</span>
 </div>
 <div class="mt-auto flex flex-col gap-xs">
-<a class="flex items-center justify-center gap-xs bg-surface-container-highest text-on-surface hover:bg-primary hover:text-on-primary py-xs rounded transition-all font-label-caps text-xs" href="https://github.com/chewsinai02/petAdoptionSystem" rel="noopener noreferrer" target="_blank">
+<a class="flex items-center justify-center gap-xs bg-primary text-on-primary hover:bg-primary/90 px-md py-sm rounded transition-all font-label-caps text-sm no-underline" href="https://github.com/chewsinai02/petAdoptionSystem" rel="noopener noreferrer" target="_blank">
 <span class="material-symbols-outlined text-sm">code</span> View on GitHub
                         </a>
-<a class="flex items-center justify-center gap-xs text-primary py-xs font-label-caps text-xs hover:gap-sm transition-all" href="https://drive.google.com/file/d/1SwWJpx1kf0JSrPAC9lQC7B3AS9mViWj7/view?usp=drive_link" rel="noopener noreferrer" target="_blank">
-                            Live Demo <span class="material-symbols-outlined text-sm">open_in_new</span>
-</a>
+<a class="flex items-center justify-center gap-xs border border-outline text-on-surface hover:border-primary hover:text-primary px-md py-sm rounded transition-all font-label-caps text-xs no-underline" href="https://drive.google.com/file/d/1SwWJpx1kf0JSrPAC9lQC7B3AS9mViWj7/view?usp=drive_link" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-sm">open_in_new</span> Live Demo
+                        </a>
 </div>
 </div>
 </div>
-<!-- 3. Logistics Billing (Locked Private) -->
-<div class="md:col-span-4 relative glass-card rounded-lg flex flex-col overflow-hidden">
-<div class="p-md relative z-20">
-<div class="flex justify-between items-center mb-md">
-<span class="bg-error-container/80 text-on-error-container font-label-caps px-xs py-1 rounded text-[10px] backdrop-blur-sm">PRIVATE FINTECH</span>
-<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">lock</span>
-</div>
-<h3 class="font-h3 text-h3 mb-xs text-on-surface">Logistics Billing Automation</h3>
-<div class="h-32 mb-md relative overflow-hidden rounded-md">
-<div class="locked-overlay absolute inset-0 z-10 flex flex-col items-center justify-center text-center p-md">
-<span class="material-symbols-outlined text-primary mb-xs" style="font-size: 32px;">vpn_key</span>
-<p class="font-label-caps text-[10px] text-on-surface mb-md">NDA PROTECTED ARCHITECTURE</p>
-<button class="bg-primary text-on-primary font-label-caps text-[11px] px-sm py-2 rounded-sm shadow-lg hover:scale-105 active:scale-95 transition-all">
-                                REQUEST ARCHITECTURE ACCESS
-                            </button>
-</div>
-<div class="blur-xl opacity-30 select-none">
-<p class="text-[10px]">Proprietary invoice processing logic. automated ledger entry for multi-region freight transport. Secure tunnel encrypted API gateway. Distributed ledger validation. Automated tax compliance engine for ASEAN regions.</p>
+<!-- 3. Logistics Billing Automation (private GitHub, business-confidential) -->
+<div class="md:col-span-4 glass-card rounded-lg flex flex-col overflow-hidden group border border-slate-800/80">
+<div class="h-32 overflow-hidden relative bg-slate-900 border-b border-slate-800">
+<img alt="Laptop with charts and data tables — configurable billing and reporting" class="absolute inset-0 h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105" decoding="async" height="800" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" width="1200"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/50 to-slate-950/10 pointer-events-none"></div>
+<div class="absolute top-3 left-3 flex flex-wrap gap-xs z-10">
+<span class="bg-slate-950/90 text-secondary font-label-caps px-xs py-1 rounded text-[10px] backdrop-blur-sm border border-secondary/20">LOGISTICS</span>
+<span class="bg-slate-950/90 text-outline font-label-caps px-xs py-1 rounded text-[10px] backdrop-blur-sm border border-slate-700 flex items-center gap-1"><span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">lock</span> PRIVATE REPO</span>
 </div>
 </div>
-<div class="flex flex-wrap gap-xs">
-<span class="tech-badge text-on-surface-variant font-code-sm text-code-sm px-xs py-1 rounded opacity-50">Python 3.11</span>
-<span class="tech-badge text-on-surface-variant font-code-sm text-code-sm px-xs py-1 rounded opacity-50">PostgreSQL</span>
+<div class="py-sm px-md pb-md flex flex-col flex-grow">
+<h3 class="font-h3 text-lg md:text-h3 mb-xs text-on-surface leading-tight">Logistics Billing Automation</h3>
+<p class="text-on-surface-variant text-sm leading-snug mb-md">Formulas, pricing parameters, and input/output table headers for billing data. <span class="text-on-surface">Private repo</span>—GitHub link for collaborators with access.</p>
+<div class="mt-auto flex flex-col gap-xs">
+<a class="flex items-center justify-center gap-xs bg-primary text-on-primary hover:bg-primary/90 px-md py-sm rounded transition-all font-label-caps text-sm no-underline" href="https://github.com/chewsinai02/Len-Billing" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-sm">code</span> GitHub (private repo)
+                        </a>
+<a class="flex items-center justify-center gap-xs border border-outline text-on-surface hover:border-primary hover:text-primary px-md py-sm rounded transition-all font-label-caps text-xs no-underline" href="mailto:chewsinai2002@gmail.com?subject=Logistics%20Billing%20Automation%20%E2%80%94%20private%20repo%20%2F%20discussion">
+<span class="material-symbols-outlined text-sm">mail</span> Discuss this project
+                        </a>
 </div>
 </div>
 </div>
 <!-- 4. Warehouse Management (Private Project) -->
-<div class="md:col-span-4 glass-card rounded-lg flex flex-col group overflow-hidden">
-<div class="p-md">
-<div class="mb-md aspect-video rounded overflow-hidden bg-slate-900 border border-slate-800 relative">
-<img alt="Warehouse Management" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="dramatic lighting inside a vast automated warehouse with blue floor lights and industrial shelving" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4FayiU2ROB6I_lF91cmTgD8D_fnxG4F7q5zsywdzsf-A6ELaC2n6oyAARCA7ZM-TFU-stI_0RGR_YWLuL_QJOfxJFE6-lzit1Qx8gpyT-CiFussi8F_AfgXtjHJegzxpGBc9rfT2dgNWnvF_c9n65cRjtlbHwggAJvACCMr-7pJ8yEPS0X3mtUOIWc-DE2intwOCTp_NSOIjxnDm-TElDqXnPe6oRPpMmba3eYaJMVSHZ4-mChR0aJyIHIfvbrwH22hdS4nS9wqlR"/>
-<div class="absolute inset-0 bg-slate-950/40"></div>
-<div class="absolute top-2 right-2">
-<span class="bg-slate-950/80 text-secondary font-label-caps text-[9px] px-2 py-1 rounded flex items-center gap-1 backdrop-blur-md">
-<span class="material-symbols-outlined text-[12px]">security</span> PRIVATE
-                            </span>
+<div class="md:col-span-4 glass-card rounded-lg flex flex-col overflow-hidden group border border-slate-800/80" id="warehouse-wms">
+<div class="h-32 overflow-hidden relative bg-slate-900 border-b border-slate-800">
+<img alt="Warehouse Management" class="absolute inset-0 h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105" data-alt="dramatic lighting inside a vast automated warehouse with blue floor lights and industrial shelving" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4FayiU2ROB6I_lF91cmTgD8D_fnxG4F7q5zsywdzsf-A6ELaC2n6oyAARCA7ZM-TFU-stI_0RGR_YWLuL_QJOfxJFE6-lzit1Qx8gpyT-CiFussi8F_AfgXtjHJegzxpGBc9rfT2dgNWnvF_c9n65cRjtlbHwggAJvACCMr-7pJ8yEPS0X3mtUOIWc-DE2intwOCTp_NSOIjxnDm-TElDqXnPe6oRPpMmba3eYaJMVSHZ4-mChR0aJyIHIfvbrwH22hdS4nS9wqlR"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/50 to-slate-950/10 pointer-events-none"></div>
+<div class="absolute top-3 left-3 flex flex-wrap gap-xs z-10">
+<span class="bg-slate-950/90 text-secondary font-label-caps px-xs py-1 rounded text-[10px] backdrop-blur-sm border border-secondary/20">WMS</span>
+<span class="bg-slate-950/90 text-outline font-label-caps px-xs py-1 rounded text-[10px] backdrop-blur-sm border border-slate-700 flex items-center gap-1"><span class="material-symbols-outlined text-[12px]">security</span> PRIVATE</span>
 </div>
 </div>
-<span class="text-secondary font-label-caps mb-xs block">LOGISTICS ENGINE</span>
-<h3 class="font-h3 text-h3 mb-xs text-on-surface">Warehouse Management System</h3>
-<p class="text-on-surface-variant text-body mb-md text-sm">Hybrid microservices architecture for real-time inventory precision and order fulfillment.</p>
+<div class="py-sm px-md pb-md flex flex-col flex-grow">
+<h3 class="font-h3 text-lg md:text-h3 mb-xs text-on-surface leading-tight">Warehouse Management System</h3>
+<p class="text-on-surface-variant text-sm leading-snug mb-md">Hybrid microservices architecture for real-time inventory precision and order fulfillment.</p>
 <div class="flex flex-wrap gap-xs mb-md">
 <span class="tech-badge text-on-surface font-code-sm text-code-sm px-xs py-1 rounded">Java/PHP</span>
 <span class="tech-badge text-on-surface font-code-sm text-code-sm px-xs py-1 rounded">Redis Streams</span>
 </div>
-<button class="w-full py-2 bg-surface-container-high border border-primary/20 text-primary font-label-caps text-xs rounded hover:bg-primary/10 transition-colors flex items-center justify-center gap-2">
-<span class="material-symbols-outlined text-sm">developer_board</span> View Architecture Breakdown
-                    </button>
+<a class="mt-auto w-full flex items-center justify-center gap-xs bg-surface-container-high border border-primary/20 text-primary font-label-caps text-xs py-sm rounded hover:bg-primary/10 transition-colors no-underline" href="case-study.html#architecture"><span class="material-symbols-outlined text-sm">developer_board</span> View Architecture Breakdown</a>
 </div>
 </div>
-<!-- 5. AI PDF & Automation (Public Tools) -->
-<div class="md:col-span-4 glass-card rounded-lg flex flex-col border-primary/20 overflow-hidden">
+<!-- 5. Lenovo shipment email tool (PHP + cron) — layout matches Logistics card -->
+<div class="md:col-span-4 glass-card rounded-lg flex flex-col overflow-hidden group border border-slate-800/80">
+<div class="h-32 overflow-hidden relative border-b border-slate-800 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800">
+<p class="sr-only">Banner: shipments, outbound email, and scheduled sends (no external image).</p>
+<div class="absolute inset-0 pointer-events-none opacity-[0.12]" style="background-image: linear-gradient(90deg, rgb(56 189 248 / 0.15) 1px, transparent 1px), linear-gradient(rgb(56 189 248 / 0.12) 1px, transparent 1px); background-size: 28px 28px;"></div>
+<div class="absolute inset-0 flex items-center justify-center gap-5 md:gap-8 text-primary/40 group-hover:text-primary/55 transition-colors duration-300" aria-hidden="true">
+<span class="material-symbols-outlined select-none transition-transform duration-500 group-hover:scale-110" style="font-size: 48px;">local_shipping</span>
+<span class="material-symbols-outlined select-none transition-transform duration-500 group-hover:scale-110" style="font-size: 42px;">mark_email_unread</span>
+<span class="material-symbols-outlined select-none transition-transform duration-500 group-hover:scale-110" style="font-size: 46px;">schedule_send</span>
+</div>
+<div class="absolute top-3 left-3 flex flex-wrap gap-xs z-10">
+<span class="bg-slate-950/90 text-secondary font-label-caps px-xs py-1 rounded text-[10px] backdrop-blur-sm border border-secondary/20">SHIPMENTS</span>
+<span class="bg-slate-950/90 text-outline font-label-caps px-xs py-1 rounded text-[10px] backdrop-blur-sm border border-slate-700 flex items-center gap-1"><span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">lock</span> PRIVATE</span>
+</div>
+</div>
+<div class="py-sm px-md pb-md flex flex-col flex-grow">
+<h3 class="font-h3 text-lg md:text-h3 mb-xs text-on-surface leading-tight">Lenovo Shipment Email Tool</h3>
+<p class="text-on-surface-variant text-sm leading-snug mb-md">PHP site for ops: upload shipment rows, pick who gets mail, and edit HTML templates. A cron script sends pre-alerts and reminders when they are due. A small lock file stops the same email going out twice if cron runs overlap. <span class="text-on-surface">Private repo</span>—GitHub link for collaborators with access.</p>
+<div class="mt-auto flex flex-col gap-xs">
+<a class="flex items-center justify-center gap-xs bg-primary text-on-primary hover:bg-primary/90 px-md py-sm rounded transition-all font-label-caps text-sm no-underline" href="https://github.com/chewsinai02/OpsShipmentEmailConsole" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-sm">code</span> GitHub (private repo)
+                        </a>
+<a class="flex items-center justify-center gap-xs border border-outline text-on-surface hover:border-primary hover:text-primary px-md py-sm rounded transition-all font-label-caps text-xs no-underline" href="mailto:chewsinai2002@gmail.com?subject=Ops%20Shipment%20Email%20Console%20%E2%80%94%20question">
+<span class="material-symbols-outlined text-sm">mail</span> Ask how it works
+                        </a>
+</div>
+</div>
+</div>
+<!-- 6. AI mail & document pipeline — MyCeids (userUploadPortal: Vite/React + PHP + Node/Playwright + Gemini) -->
+<div class="md:col-span-8 glass-card rounded-lg flex flex-col overflow-hidden border border-slate-800/80">
 <div class="p-md flex-grow">
-<div class="flex items-center justify-between mb-md">
+<div class="flex items-center justify-between mb-md flex-wrap gap-xs">
 <div class="flex items-center gap-xs">
 <span class="material-symbols-outlined text-primary">psychology</span>
-<span class="text-primary font-label-caps">AI AGENTS</span>
+<span class="text-primary font-label-caps">MAIL · PDF · AI · MYCEIDS</span>
 </div>
-<span class="text-[10px] text-slate-500 font-label-caps">OPEN SOURCE</span>
+<span class="text-[10px] text-slate-500 font-label-caps">PUBLIC · MYCEIDS</span>
 </div>
-<h3 class="font-h3 text-h3 mb-xs text-on-surface">AI PDF &amp; Email Automation</h3>
-<p class="text-on-surface-variant text-body mb-lg text-sm">Intelligent data extraction from unstructured PDF documents with automated validation loops.</p>
-<div class="flex flex-wrap gap-xs mb-md">
-<span class="tech-badge text-on-surface font-code-sm text-code-sm px-xs py-1 rounded">OpenAI v4</span>
+<h3 class="font-h3 text-lg md:text-h3 mb-xs text-on-surface leading-tight">AI Mail &amp; Document Pipeline (MyCeids)</h3>
+<p class="text-on-surface-variant text-body mb-md text-sm leading-snug">End-to-end for teams and bundles: documents enter <span class="text-on-surface">either</span> from <span class="text-on-surface">email attachments</span> (PHP <span class="text-on-surface">email_receiver_system</span>) <span class="text-on-surface">or</span> from <span class="text-on-surface">manual upload</span>—not both required. Supported inputs include <span class="text-on-surface">ZIP</span> and Office/images; the pipeline unpacks where needed, <span class="text-on-surface">converts to PDF</span>, and can <span class="text-on-surface">compress</span> large PDFs before <span class="text-on-surface">Gemini</span> classifies and extracts fields. <span class="text-on-surface">Node + Playwright</span> (headless Chromium) then runs the MyCeids upload steps on the server. Vite + React UI for review and hand-off.</p>
+<div class="flex flex-wrap gap-xs mb-sm">
+<span class="tech-badge text-on-surface font-code-sm text-code-sm px-xs py-1 rounded">Vite</span>
+<span class="tech-badge text-on-surface font-code-sm text-code-sm px-xs py-1 rounded">React</span>
+<span class="tech-badge text-on-surface font-code-sm text-code-sm px-xs py-1 rounded">PHP</span>
+<span class="tech-badge text-on-surface font-code-sm text-code-sm px-xs py-1 rounded">Gemini</span>
 <span class="tech-badge text-on-surface font-code-sm text-code-sm px-xs py-1 rounded">Playwright</span>
 </div>
 </div>
 <div class="p-md bg-slate-900/50 border-t border-slate-800">
 <div class="grid grid-cols-2 gap-sm">
-<button class="bg-primary text-on-primary font-label-caps py-xs text-[10px] rounded hover:opacity-90">LIVE TOOL</button>
-<button class="border border-outline text-on-surface font-label-caps py-xs text-[10px] rounded hover:border-primary transition-all">GIT CLONE</button>
+<a class="bg-primary text-on-primary font-label-caps text-sm py-sm rounded hover:opacity-90 text-center no-underline inline-flex items-center justify-center gap-1" href="https://github.com/chewsinai02/userUploadPortal" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-sm">code</span> GITHUB</a>
+<a class="border border-outline text-on-surface font-label-caps text-sm py-sm rounded hover:border-primary transition-all text-center no-underline inline-flex items-center justify-center gap-1" href="mailto:chewsinai2002@gmail.com?subject=AI%20Mail%20%26%20Document%20Pipeline%20%28MyCeids%29%20demo"><span class="material-symbols-outlined text-sm">play_circle</span> LIVE DEMO</a>
 </div>
 </div>
 </div>
-<!-- 6. Auto Schedule Emails & 7. MyCeids (Bento Style - Hybrid Access) -->
-<div class="md:col-span-6 glass-card rounded-lg p-md flex gap-md items-center group relative">
-<div class="w-24 h-24 flex-shrink-0 bg-primary-container/20 rounded-lg flex items-center justify-center border border-primary/20 transition-all group-hover:scale-105">
-<span class="material-symbols-outlined text-primary" style="font-size: 40px;">schedule_send</span>
-</div>
-<div>
-<div class="flex items-center gap-2 mb-1">
-<h3 class="font-h3 text-h3 text-on-surface text-lg">Auto Schedule Emails</h3>
-<span class="bg-surface-container-high text-on-surface-variant text-[8px] font-label-caps px-1.5 py-0.5 rounded">PRIVATE</span>
-</div>
-<p class="text-sm text-on-surface-variant mb-xs">Enterprise communication dispatch with cron orchestration.</p>
-<button class="text-primary font-label-caps text-[10px] hover:underline flex items-center gap-1">
-                        Request System Architecture <span class="material-symbols-outlined text-xs">arrow_outward</span>
-</button>
+<!-- 7. API Log Platform (pairs with AI mail & document pipeline row: 8 + 4) -->
+<div class="md:col-span-4 glass-card rounded-lg flex flex-col overflow-hidden group border border-slate-800/80" id="api-log-platform">
+<div class="h-32 overflow-hidden relative bg-slate-900 border-b border-slate-800 flex items-center justify-center">
+<div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent pointer-events-none"></div>
+<span class="material-symbols-outlined text-primary/50 relative z-[1] transition-transform duration-500 group-hover:scale-110 select-none" style="font-size: 48px;">monitoring</span>
+<div class="absolute top-3 left-3 flex flex-wrap gap-xs z-10">
+<span class="bg-slate-950/90 text-secondary font-label-caps px-xs py-1 rounded text-[10px] backdrop-blur-sm border border-secondary/20">API</span>
+<span class="bg-green-900/40 text-green-400 font-label-caps px-xs py-1 rounded text-[10px] backdrop-blur-sm border border-green-800/50">PUBLIC</span>
 </div>
 </div>
-<div class="md:col-span-6 glass-card rounded-lg p-md flex gap-md items-center group relative">
-<div class="w-24 h-24 flex-shrink-0 bg-tertiary-container/20 rounded-lg flex items-center justify-center border border-tertiary/20 transition-all group-hover:scale-105">
-<span class="material-symbols-outlined text-tertiary" style="font-size: 40px;">cloud_upload</span>
+<div class="py-sm px-md pb-md flex flex-col flex-grow">
+<span class="text-primary font-label-caps text-[10px] mb-xs">API OBSERVABILITY</span>
+<h3 class="font-h3 text-lg md:text-h3 mb-xs text-on-surface leading-tight">API Log Platform</h3>
+<p class="text-on-surface-variant text-sm leading-snug mb-md flex-grow">Explains failures (missing fields, timeouts, flaky runs). Users <span class="text-on-surface">re-upload or re-trigger the same JSON</span>—less support load.</p>
+<div class="flex flex-wrap gap-xs mb-md">
+<span class="tech-badge text-on-surface font-code-sm px-xs py-1 rounded">JSON replay</span>
+<span class="tech-badge text-on-surface font-code-sm px-xs py-1 rounded">Diagnostics</span>
 </div>
-<div>
-<div class="flex items-center gap-2 mb-1">
-<h3 class="font-h3 text-h3 text-on-surface text-lg">MyCeids AI Upload</h3>
-<span class="bg-green-900/30 text-green-400 text-[8px] font-label-caps px-1.5 py-0.5 rounded">PUBLIC</span>
-</div>
-<p class="text-sm text-on-surface-variant mb-xs">Optimized cloud-based workflow for high-volume data ingestion.</p>
-<div class="flex gap-md">
-<a class="text-slate-400 hover:text-white transition-colors flex items-center gap-1 text-[10px] font-label-caps" href="#">GITHUB</a>
-<a class="text-tertiary hover:underline flex items-center gap-1 text-[10px] font-label-caps" href="#">LIVE DEMO</a>
-</div>
+<a class="mt-auto flex w-full items-center justify-center gap-xs bg-primary text-on-primary hover:bg-primary/90 font-label-caps text-sm py-sm rounded transition-all no-underline" href="https://github.com/chewsinai02/apiLog" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-sm">code</span> GitHub</a>
 </div>
 </div>
 </div>
@@ -328,14 +337,27 @@
 <p class="font-manrope text-xs uppercase tracking-widest text-slate-500">© 2026 Modern Architect Portfolio. Built with Precision.</p>
 </div>
 <div class="flex gap-lg">
-<a class="text-slate-500 hover:text-sky-400 transition-colors duration-300 font-manrope text-xs uppercase tracking-widest opacity-80 hover:opacity-100" href="#">LinkedIn</a>
-<a class="text-slate-500 hover:text-sky-400 transition-colors duration-300 font-manrope text-xs uppercase tracking-widest opacity-80 hover:opacity-100" href="#">GitHub</a>
-<a class="text-slate-500 hover:text-sky-400 transition-colors duration-300 font-manrope text-xs uppercase tracking-widest opacity-80 hover:opacity-100" href="#">Source Code</a>
-<a class="text-slate-500 hover:text-sky-400 transition-colors duration-300 font-manrope text-xs uppercase tracking-widest opacity-80 hover:opacity-100" href="#">Privacy</a>
+<a class="text-slate-500 hover:text-sky-400 transition-colors duration-300 font-manrope text-xs uppercase tracking-widest opacity-80 hover:opacity-100 no-underline" href="https://www.linkedin.com/in/chewsinai02" rel="noopener noreferrer" target="_blank">LinkedIn</a>
+<a class="text-slate-500 hover:text-sky-400 transition-colors duration-300 font-manrope text-xs uppercase tracking-widest opacity-80 hover:opacity-100 no-underline" href="https://github.com/chewsinai02" rel="noopener noreferrer" target="_blank">GitHub</a>
+<a class="text-slate-500 hover:text-sky-400 transition-colors duration-300 font-manrope text-xs uppercase tracking-widest opacity-80 hover:opacity-100 no-underline" href="https://github.com/chewsinai02/portfolio" rel="noopener noreferrer" target="_blank">Source Code</a>
+<a class="text-slate-500 hover:text-sky-400 transition-colors duration-300 font-manrope text-xs uppercase tracking-widest opacity-80 hover:opacity-100 no-underline" href="mailto:chewsinai2002@gmail.com?subject=Privacy%20inquiry">Privacy</a>
 </div>
 </footer>
 <!-- FAB for quick action -->
-<button class="fixed bottom-xs right-xs bg-primary text-on-primary p-md rounded-full shadow-lg active:scale-95 transition-transform flex items-center justify-center z-50">
-<span class="material-symbols-outlined">mail</span>
-</button>
+<a class="fixed bottom-xs right-xs bg-primary text-on-primary p-md rounded-full shadow-lg active:scale-95 transition-transform flex items-center justify-center z-50 no-underline hover:opacity-90" href="mailto:chewsinai2002@gmail.com?subject=Portfolio%20contact" aria-label="Email contact"><span class="material-symbols-outlined">mail</span></a>
+<script>
+(function () {
+  function copyPageLink() {
+    var url = window.location.href;
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(url);
+    } else {
+      window.prompt("Copy this link:", url);
+    }
+  }
+  document.querySelectorAll("[data-copy-page-link]").forEach(function (el) {
+    el.addEventListener("click", copyPageLink);
+  });
+})();
+</script>
 </body></html>

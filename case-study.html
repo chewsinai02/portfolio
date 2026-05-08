@@ -129,8 +129,8 @@
 <a class="text-slate-400 hover:text-sky-300 hover:bg-slate-800/50 transition-all px-2 py-1 rounded font-manrope text-sm font-medium tracking-tight active:scale-95 duration-200" href="about.html">About</a>
 </nav>
 <div class="flex items-center gap-sm shrink-0">
-<span class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-sky-400 transition-colors">terminal</span>
-<span class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-sky-400 transition-colors">share</span>
+<a class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-sky-400 transition-colors no-underline" href="https://github.com/chewsinai02" rel="noopener noreferrer" target="_blank" aria-label="GitHub profile">terminal</a>
+<button type="button" class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-sky-400 transition-colors bg-transparent border-0 p-0 font-inherit" data-copy-page-link="" aria-label="Copy page link">share</button>
 <a class="inline-flex items-center justify-center bg-primary text-on-primary font-label-caps px-md py-xs rounded hover:opacity-90 active:scale-95 transition-all ml-md" href="https://drive.google.com/file/d/1fuY4DvwW3KRiucmMZ1CRulHg6cifS1qi/view?usp=drive_link" rel="noopener noreferrer" target="_blank">Resume</a>
 </div>
 </header>
@@ -248,9 +248,7 @@
 <span class="material-symbols-outlined text-primary text-6xl mb-md" data-icon="schema">schema</span>
 <h3 class="text-h3 font-h3 mb-sm">Structural UML Redacted</h3>
 <p class="text-body font-body text-on-surface-variant mb-lg">A detailed UML Sequence and Class Diagram mapping the 14 micro-services and their interaction through the event bus is available for private review. Key components include the Idempotent Gateways, Distributed Sagas, and Real-time Reconciliation Engine.</p>
-<button class="bg-primary text-on-primary font-manrope font-bold px-lg py-3 rounded-lg flex items-center gap-sm mx-auto hover:brightness-110 active:scale-95 transition-all">
-                        Request High-Res Architecture Docs <span class="font-code-sm">→</span>
-</button>
+<a class="bg-primary text-on-primary font-manrope font-bold px-lg py-3 rounded-lg flex items-center gap-sm mx-auto hover:brightness-110 active:scale-95 transition-all no-underline w-fit" href="mailto:chewsinai2002@gmail.com?subject=Request%20architecture%20documentation%20%28case%20study%29">Request High-Res Architecture Docs <span class="font-code-sm">→</span></a>
 </div>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-md mt-lg">
@@ -319,10 +317,25 @@
 <a class="text-lg font-black text-slate-50 font-manrope hover:text-sky-300 transition-colors" href="index.html">Chew Sin Ai</a>
 <div class="font-manrope text-xs uppercase tracking-widest text-slate-500">© 2026 Modern Architect Portfolio. Built with Precision.</div>
 <div class="flex gap-8">
-<a class="font-manrope text-xs uppercase tracking-widest text-slate-500 hover:text-sky-400 transition-colors duration-300 opacity-80 hover:opacity-100" href="#">LinkedIn</a>
-<a class="font-manrope text-xs uppercase tracking-widest text-slate-500 hover:text-sky-400 transition-colors duration-300 opacity-80 hover:opacity-100" href="#">GitHub</a>
-<a class="font-manrope text-xs uppercase tracking-widest text-slate-500 hover:text-sky-400 transition-colors duration-300 opacity-80 hover:opacity-100" href="#">Source Code</a>
-<a class="font-manrope text-xs uppercase tracking-widest text-slate-500 hover:text-sky-400 transition-colors duration-300 opacity-80 hover:opacity-100" href="#">Privacy</a>
+<a class="font-manrope text-xs uppercase tracking-widest text-slate-500 hover:text-sky-400 transition-colors duration-300 opacity-80 hover:opacity-100 no-underline" href="https://www.linkedin.com/in/chewsinai02" rel="noopener noreferrer" target="_blank">LinkedIn</a>
+<a class="font-manrope text-xs uppercase tracking-widest text-slate-500 hover:text-sky-400 transition-colors duration-300 opacity-80 hover:opacity-100 no-underline" href="https://github.com/chewsinai02" rel="noopener noreferrer" target="_blank">GitHub</a>
+<a class="font-manrope text-xs uppercase tracking-widest text-slate-500 hover:text-sky-400 transition-colors duration-300 opacity-80 hover:opacity-100 no-underline" href="https://github.com/chewsinai02/portfolio" rel="noopener noreferrer" target="_blank">Source Code</a>
+<a class="font-manrope text-xs uppercase tracking-widest text-slate-500 hover:text-sky-400 transition-colors duration-300 opacity-80 hover:opacity-100 no-underline" href="mailto:chewsinai2002@gmail.com?subject=Privacy%20inquiry">Privacy</a>
 </div>
 </footer>
+<script>
+(function () {
+  function copyPageLink() {
+    var url = window.location.href;
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(url);
+    } else {
+      window.prompt("Copy this link:", url);
+    }
+  }
+  document.querySelectorAll("[data-copy-page-link]").forEach(function (el) {
+    el.addEventListener("click", copyPageLink);
+  });
+})();
+</script>
 </body></html>
