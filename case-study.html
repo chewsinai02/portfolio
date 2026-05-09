@@ -3,7 +3,8 @@
 <html class="dark" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Architect.Dev | Private Project Case Study</title>
+<meta name="description" content="Annotated project index aligned with Projects: repos, documentation, demos, PDFs, and contact paths for recruiters—including private-repo and employer-context notes."/>
+<title>Case Studies | Chew Sin Ai</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Space+Grotesk:wght@400;500;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
@@ -99,22 +100,24 @@
         }
     </script>
 <style>
-        .glass-overlay {
+        .material-symbols-outlined {
+            font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+        }
+        .glass-card {
+            background: rgba(15, 23, 42, 0.45);
             backdrop-filter: blur(12px);
-            background-color: rgba(15, 23, 42, 0.7);
+            transition: border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
         }
-        .flat-tech-card {
-            background-color: #0F172A;
-            border: 1px solid #1E293B;
-            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        .glass-card:hover {
+            background: rgba(15, 23, 42, 0.68);
+            box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.12), 0 12px 40px -12px rgba(0, 0, 0, 0.45);
         }
-        .flat-tech-card:hover {
-            border-color: #38bdf8;
-            box-shadow: 0 0 15px rgba(56, 189, 248, 0.1);
+        .case-study-sheet {
+            box-shadow: 0 0 0 1px rgba(51, 65, 85, 0.35), 0 25px 50px -12px rgba(0, 0, 0, 0.55);
         }
-        .diagram-grid {
-            background-image: radial-gradient(circle at 1px 1px, #1E293B 1px, transparent 0);
-            background-size: 40px 40px;
+        .tech-badge {
+            background: rgba(23, 31, 51, 0.8);
+            border: 1px solid rgba(135, 146, 154, 0.2);
         }
     </style>
 </head>
@@ -125,7 +128,7 @@
 <nav class="hidden md:flex items-center gap-md">
 <a class="text-slate-400 hover:text-sky-300 hover:bg-slate-800/50 transition-all px-2 py-1 rounded font-manrope text-sm font-medium tracking-tight active:scale-95 duration-200" href="projects.html">Projects</a>
 <a class="text-sky-400 border-b-2 border-sky-400 pb-1 font-manrope text-sm font-medium tracking-tight" href="case-study.html#overview">Case Studies</a>
-<a class="text-slate-400 hover:text-sky-300 hover:bg-slate-800/50 transition-all px-2 py-1 rounded font-manrope text-sm font-medium tracking-tight active:scale-95 duration-200" href="case-study.html#architecture">Architecture</a>
+<a class="text-slate-400 hover:text-sky-300 hover:bg-slate-800/50 transition-all px-2 py-1 rounded font-manrope text-sm font-medium tracking-tight active:scale-95 duration-200" href="case-study.html#professional-context">Context</a>
 <a class="text-slate-400 hover:text-sky-300 hover:bg-slate-800/50 transition-all px-2 py-1 rounded font-manrope text-sm font-medium tracking-tight active:scale-95 duration-200" href="about.html">About</a>
 </nav>
 <div class="flex items-center gap-sm shrink-0">
@@ -134,186 +137,168 @@
 <a class="inline-flex items-center justify-center bg-primary text-on-primary font-label-caps px-md py-xs rounded hover:opacity-90 active:scale-95 transition-all ml-md" href="https://drive.google.com/file/d/1fuY4DvwW3KRiucmMZ1CRulHg6cifS1qi/view?usp=drive_link" rel="noopener noreferrer" target="_blank">Resume</a>
 </div>
 </header>
-<main class="pt-32 max-w-7xl mx-auto px-12">
-<!-- Hero / Project Title -->
-<section class="mb-xl scroll-mt-24" id="overview">
-<div class="flex flex-col gap-xs mb-md">
-<span class="text-label-caps font-label-caps text-secondary uppercase">Case Study 04</span>
-<h1 class="text-h1 font-h1 text-on-surface">Project: Hyperion Core</h1>
+<main class="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-lg py-xl mt-16 pb-12 md:pb-16">
+<div class="case-study-sheet rounded-2xl border border-slate-800/70 bg-slate-900/45 backdrop-blur-xl overflow-hidden">
+<!-- Hero -->
+<div id="overview" class="scroll-mt-24 p-6 sm:p-8 lg:p-10 xl:p-12 flex flex-col gap-3 md:gap-4">
+<span class="text-label-caps font-label-caps text-secondary uppercase">Portfolio</span>
+<h1 class="text-h1 font-h1 text-on-surface">Case Studies</h1>
+<p class="text-body font-body text-on-surface-variant w-full leading-relaxed text-justify hyphens-auto md:text-lg text-slate-300/95">Annotated index of the same projects as <a class="text-primary hover:underline font-medium" href="projects.html">Projects</a>: repositories, documentation, demos, PDFs, and email where work is not public.</p>
+<p class="text-body font-body text-on-surface-variant w-full leading-relaxed text-justify hyphens-auto">Private repos still list their GitHub destinations; access is by request. For how employer-associated rows sit next to academic and public work, see <a class="text-primary hover:underline font-medium" href="#professional-context">Professional context</a>.</p>
 </div>
-<!-- Security Notice Banner -->
-<div class="bg-surface-container-low border-l-4 border-primary p-md flex items-start gap-sm mb-lg">
-<span class="material-symbols-outlined text-primary" data-icon="lock">lock</span>
-<div class="flex flex-col gap-xs">
-<span class="text-label-caps font-label-caps text-primary">Confidentiality Protocol</span>
-<p class="text-body font-body text-on-surface-variant max-w-3xl">High-level architectural overview. Specific proprietary algorithms and internal IP have been generalized. This document focuses on structural transformation and system performance rather than source code.</p>
-</div>
-</div>
-<!-- Bento Grid - Project Meta -->
-<div class="grid grid-cols-12 gap-md h-auto lg:h-[400px]">
-<div class="col-span-12 lg:col-span-8 relative overflow-hidden rounded-lg flat-tech-card group">
-<img alt="Architecture Background" class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-105 transition-transform duration-700" data-alt="Modern high-tech server room with glowing blue neon lights on black equipment racks representing high performance architecture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsm3qAQTujVumIfIif2B1oXZlnbjla9buN2OS9pZOF0fJIDyrluqc2ERRaPAOir8bZaB7UcOaBQaBbDAP2APTDHDz8dNsOX50RAXIZSjvQ88cPrbG5UqAAQ2Ru_SeRn_fCv-WNHIKIW_8FBmm2AGnNua--TVQKEuTKG9dDKC5unZsaHm_oA-DaUhgAohLG_yb_w83ql335K8dTphS5a1vd5k66HUMgZVXxnDEwJdNghy0yGh_8ttSFDlfVMgm2tP8CX5Sl1kDVqLMM"/>
-<div class="absolute inset-0 bg-gradient-to-t from-slate-950 to-transparent"></div>
-<div class="absolute bottom-0 left-0 p-lg">
-<h2 class="text-h2 font-h2 mb-sm">The Strategic Problem</h2>
-<p class="text-body font-body text-on-surface-variant max-w-xl">Addressing systemic latency in a global settlement engine. The legacy monolith prevented vertical scaling during high-frequency trading sessions, resulting in significant downstream operational risks.</p>
+<div class="border-t border-slate-800/80 bg-slate-950/40 px-6 sm:px-8 lg:px-10 py-5 md:py-6 flex items-start gap-3 border-l-4 border-l-primary">
+<span class="material-symbols-outlined text-primary shrink-0 mt-0.5" data-icon="lock">lock</span>
+<div class="flex flex-col gap-1.5 min-w-0">
+<span class="text-label-caps font-label-caps text-primary">Confidentiality</span>
+<p class="text-body font-body text-on-surface-variant leading-relaxed text-justify hyphens-auto">No client-identifying hostnames, internal diagrams, or proprietary identifiers. Use each card&apos;s links for artifacts; use Professional context for a single hiring-oriented entry point.</p>
 </div>
 </div>
-<div class="col-span-12 lg:col-span-4 flex flex-col gap-md">
-<div class="flex-1 p-md flat-tech-card rounded-lg flex flex-col justify-between">
-<span class="text-label-caps font-label-caps text-on-surface-variant">SCOPE</span>
-<span class="text-h3 font-h3 text-on-surface">Enterprise Re-platforming</span>
-</div>
-<div class="flex-1 p-md flat-tech-card rounded-lg flex flex-col justify-between">
-<span class="text-label-caps font-label-caps text-on-surface-variant">ARCHITECTURE MODEL</span>
+<div class="border-t border-slate-800/80 px-5 sm:px-6 lg:px-8 xl:px-10 py-6 md:py-8 scroll-mt-28">
+<h2 class="text-h2 font-h2 text-on-surface mb-5 md:mb-6">Documented projects</h2>
+<!-- Project catalog: 12-column rhythm (matches projects.html gutter) -->
+<div class="grid grid-cols-1 md:grid-cols-12 md:items-stretch gap-gutter">
+<div class="md:col-span-12 p-md md:p-lg glass-card rounded-xl overflow-hidden border border-slate-800/80 hover:border-sky-400/25 flex flex-col gap-sm h-full min-h-0 group transition-colors duration-200">
 <div class="flex flex-wrap gap-xs">
-<span class="bg-slate-800 text-code-sm font-code-sm px-2 py-1">Distributed Mesh</span>
-<span class="bg-slate-800 text-code-sm font-code-sm px-2 py-1">Event-Driven</span>
-<span class="bg-slate-800 text-code-sm font-code-sm px-2 py-1">CQRS</span>
+<span class="bg-slate-800 text-sky-400 border border-sky-400/30 font-label-caps px-2 py-1 rounded text-[10px]">PROPRIETARY</span>
+<span class="bg-slate-800 text-secondary font-label-caps px-2 py-1 rounded text-[10px]">HEALTHCARE</span>
+</div>
+<h3 class="text-lg md:text-h3 font-h3 text-primary leading-tight">Patient Care Real-Time Management</h3>
+<p class="text-body font-body text-on-surface-variant leading-relaxed text-justify">Real-time communication and management between families and hospitals. Laravel PHP web app for doctor, nurse, nurse admin, and admin; Flutter mobile app for patients.</p>
+<div class="flex flex-wrap gap-xs">
+<span class="tech-badge text-on-surface font-code-sm text-code-sm px-2 py-1 rounded">Laravel</span>
+<span class="tech-badge text-on-surface font-code-sm text-code-sm px-2 py-1 rounded">Flutter</span>
+<span class="tech-badge text-on-surface font-code-sm text-code-sm px-2 py-1 rounded">MySQL</span>
+</div>
+<div class="flex flex-wrap gap-sm gap-y-2 mt-auto pt-md border-t border-slate-800/50 w-full">
+<a class="text-primary font-label-caps text-xs hover:underline" href="https://github.com/chewsinai02/fyp_website_v3" rel="noopener noreferrer" target="_blank">GitHub (web)</a>
+<a class="text-primary font-label-caps text-xs hover:underline" href="https://github.com/chewsinai02/fyp_patient_v1" rel="noopener noreferrer" target="_blank">GitHub (mobile)</a>
+<a class="text-on-surface-variant font-label-caps text-xs hover:text-primary hover:underline" href="https://drive.google.com/file/d/1uqflBjrnHDOGEecU7uxtFWoIWLSzCmLq/view?usp=drive_link" rel="noopener noreferrer" target="_blank">Documentation</a>
+<a class="text-on-surface-variant font-label-caps text-xs hover:text-primary hover:underline" href="https://drive.google.com/file/d/1ehxQjB8EzZM0Vi7ffV8jydR470f1j5u1/view?usp=drive_link" rel="noopener noreferrer" target="_blank">Demo</a>
 </div>
 </div>
-<div class="flex-1 p-md flat-tech-card rounded-lg flex flex-col justify-between">
-<span class="text-label-caps font-label-caps text-on-surface-variant">SCALING FACTOR</span>
-<span class="text-h3 font-h3 text-secondary-fixed-dim">10x Concurrent Loads</span>
+<div class="md:col-span-6 p-md md:p-lg glass-card rounded-xl overflow-hidden border border-slate-800/80 hover:border-sky-400/25 flex flex-col gap-sm h-full min-h-0 group transition-colors duration-200">
+<div class="flex flex-wrap gap-xs">
+<span class="bg-slate-800 text-secondary font-label-caps px-2 py-1 rounded text-[10px]">JAVA DESKTOP</span>
+<span class="bg-slate-800 text-outline font-label-caps px-2 py-1 rounded text-[10px]">PUBLIC</span>
+</div>
+<h3 class="text-lg md:text-h3 font-h3 text-primary leading-tight">Pet Adoption System</h3>
+<p class="text-body font-body text-on-surface-variant leading-relaxed text-justify">Modular JavaFX application for automated shelter logistics and lifecycle tracking.</p>
+<div class="flex flex-wrap gap-xs">
+<span class="tech-badge text-on-surface font-code-sm text-code-sm px-2 py-1 rounded">JavaFX</span>
+<span class="tech-badge text-on-surface font-code-sm text-code-sm px-2 py-1 rounded">MVC Pattern</span>
+</div>
+<div class="flex flex-wrap gap-sm gap-y-2 mt-auto pt-md border-t border-slate-800/50 w-full">
+<a class="text-primary font-label-caps text-xs hover:underline" href="https://github.com/chewsinai02/petAdoptionSystem" rel="noopener noreferrer" target="_blank">GitHub</a>
+<a class="text-on-surface-variant font-label-caps text-xs hover:text-primary hover:underline" href="https://drive.google.com/file/d/1SwWJpx1kf0JSrPAC9lQC7B3AS9mViWj7/view?usp=drive_link" rel="noopener noreferrer" target="_blank">Demo</a>
 </div>
 </div>
+<div class="md:col-span-6 p-md md:p-lg glass-card rounded-xl overflow-hidden border border-slate-800/80 hover:border-sky-400/25 flex flex-col gap-sm h-full min-h-0 group transition-colors duration-200">
+<div class="flex flex-wrap gap-xs">
+<span class="bg-slate-800 text-secondary font-label-caps px-2 py-1 rounded text-[10px]">LOGISTICS</span>
+<span class="bg-slate-800 text-outline font-label-caps px-2 py-1 rounded text-[10px]">PRIVATE REPO</span>
 </div>
-</section>
-<!-- Problem Statement -->
-<section class="mb-xl grid grid-cols-1 md:grid-cols-2 gap-lg items-start">
-<div class="flex flex-col gap-md">
-<span class="text-label-caps font-label-caps text-primary">01 / THE PROBLEM</span>
-<h2 class="text-h2 font-h2">Structural Bottlenecks</h2>
-<p class="text-body font-body text-on-surface-variant">The existing infrastructure relied on synchronous request-response cycles across a single database instance. This created a ceiling on performance that no amount of vertical hardware scaling could resolve.</p>
-<ul class="flex flex-col gap-sm">
-<li class="flex items-start gap-sm">
-<span class="material-symbols-outlined text-error shrink-0" data-icon="warning">warning</span>
-<span class="text-body font-body">Global mutex locks on transaction tables causing queue backup.</span>
-</li>
-<li class="flex items-start gap-sm">
-<span class="material-symbols-outlined text-error shrink-0" data-icon="warning">warning</span>
-<span class="text-body font-body">Coupled business logic making independent service scaling impossible.</span>
-</li>
-<li class="flex items-start gap-sm">
-<span class="material-symbols-outlined text-error shrink-0" data-icon="warning">warning</span>
-<span class="text-body font-body">Lack of observability for asynchronous cross-service workflows.</span>
-</li>
-</ul>
-</div>
-<div class="p-lg flat-tech-card rounded-lg bg-surface-container h-full flex flex-col justify-center">
-<div class="mb-md flex justify-between items-center">
-<span class="text-label-caps font-label-caps text-on-surface-variant">LEGACY MONOLITH STATE</span>
-<span class="material-symbols-outlined text-slate-500" data-icon="account_tree">account_tree</span>
-</div>
-<div class="space-y-4">
-<div class="p-4 border border-slate-700 bg-slate-900/30 rounded text-center">
-<div class="text-xs text-slate-500 mb-1">INGRESS</div>
-<div class="font-medium">UNSTRUCTURED API TRAFFIC</div>
-</div>
-<div class="flex justify-center"><span class="material-symbols-outlined text-slate-700" data-icon="arrow_downward">arrow_downward</span></div>
-<div class="p-6 border-2 border-error/30 bg-error/5 rounded text-center">
-<div class="text-xs text-error mb-1 uppercase font-bold tracking-widest">Bottleneck</div>
-<div class="font-medium text-error">SINGLE ORCHESTRATION KERNEL</div>
-</div>
-<div class="flex justify-center"><span class="material-symbols-outlined text-slate-700" data-icon="arrow_downward">arrow_downward</span></div>
-<div class="p-4 border border-slate-700 bg-slate-900/30 rounded text-center">
-<div class="text-xs text-slate-500 mb-1 uppercase font-bold tracking-widest">Shared Fate</div>
-<div class="font-medium">CENTRAL PERSISTENCE LAYER</div>
+<h3 class="text-lg md:text-h3 font-h3 text-primary leading-tight">Logistics Billing Automation</h3>
+<p class="text-body font-body text-on-surface-variant leading-relaxed text-justify">Formulas, pricing parameters, and input/output table headers for billing data. <span class="text-on-surface">Private repository</span>—GitHub access for collaborators upon request.</p>
+<div class="flex flex-wrap gap-sm gap-y-2 mt-auto pt-md border-t border-slate-800/50 w-full">
+<a class="text-primary font-label-caps text-xs hover:underline" href="https://github.com/chewsinai02/Len-Billing" rel="noopener noreferrer" target="_blank">GitHub (private)</a>
+<a class="text-on-surface-variant font-label-caps text-xs hover:text-primary hover:underline" href="mailto:chewsinai2002@gmail.com?subject=Logistics%20Billing%20Automation%20%E2%80%94%20private%20repo%20%2F%20discussion">Contact</a>
+<a class="text-on-surface-variant font-label-caps text-xs hover:text-primary hover:underline" href="projects.html#logistics-billing">View on Projects</a>
 </div>
 </div>
+<div class="md:col-span-6 p-md md:p-lg glass-card rounded-xl overflow-hidden border border-slate-800/80 hover:border-sky-400/25 flex flex-col gap-sm h-full min-h-0 group transition-colors duration-200">
+<div class="flex flex-wrap gap-xs">
+<span class="bg-slate-800 text-secondary font-label-caps px-2 py-1 rounded text-[10px]">WMS</span>
+<span class="bg-slate-800 text-outline font-label-caps px-2 py-1 rounded text-[10px]">PRIVATE</span>
+<span class="bg-slate-800 text-primary font-label-caps px-2 py-1 rounded text-[10px] border border-primary/25">EMPLOYER SYSTEM</span>
 </div>
-</section>
-<!-- Dedicated System Architecture Section -->
-<section class="mb-xl scroll-mt-24" id="architecture">
-<div class="flex flex-col gap-md mb-lg">
-<span class="text-label-caps font-label-caps text-primary">02 / SYSTEM ARCHITECTURE</span>
-<h2 class="text-h2 font-h2">Distributed Event-Driven Topology</h2>
-<p class="text-body font-body text-on-surface-variant max-w-3xl">The solution migrated the core settlement logic into a highly decoupled architecture using a service mesh and a distributed message backbone. This allows for linear scalability and fault isolation across all business domains.</p>
+<h3 class="text-lg md:text-h3 font-h3 text-primary leading-tight">Warehouse Management System</h3>
+<p class="text-body font-body text-on-surface-variant leading-relaxed text-justify">Employer&apos;s existing warehouse product (Java/PHP context). <span class="text-on-surface font-medium">Very small scoped</span> contributions: targeted functions and fixes within the team codebase.</p>
+<div class="flex flex-wrap gap-xs">
+<span class="tech-badge text-on-surface font-code-sm text-code-sm px-2 py-1 rounded">Java</span>
+<span class="tech-badge text-on-surface font-code-sm text-code-sm px-2 py-1 rounded">PHP</span>
 </div>
-<!-- Large UML / Flow Diagram Placeholder -->
-<div class="w-full aspect-[21/10] bg-surface-container-lowest border border-slate-800 rounded-xl relative overflow-hidden diagram-grid flex items-center justify-center">
-<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-<!-- Stylized SVG abstraction of a diagram -->
-<svg class="w-full h-full opacity-20" fill="none" viewbox="0 0 1000 400" xmlns="http://www.w3.org/2000/svg">
-<path d="M100 200 H900 M300 100 V300 M500 100 V300 M700 100 V300" stroke="#38bdf8" stroke-dasharray="10 10" stroke-width="2"></path>
-<circle cx="100" cy="200" fill="#38bdf8" r="10"></circle>
-<circle cx="900" cy="200" fill="#38bdf8" r="10"></circle>
-<rect fill="#38bdf8" fill-opacity="0.2" height="100" rx="4" stroke="#38bdf8" width="100" x="250" y="150"></rect>
-<rect fill="#38bdf8" fill-opacity="0.2" height="100" rx="4" stroke="#38bdf8" width="100" x="450" y="150"></rect>
-<rect fill="#38bdf8" fill-opacity="0.2" height="100" rx="4" stroke="#38bdf8" width="100" x="650" y="150"></rect>
-</svg>
-</div>
-<!-- Redacted Overlay (Keep the NDA feel but more focus on UML/Architecture) -->
-<div class="relative z-10 glass-overlay p-xl rounded-xl border border-white/10 text-center max-w-2xl mx-gutter">
-<span class="material-symbols-outlined text-primary text-6xl mb-md" data-icon="schema">schema</span>
-<h3 class="text-h3 font-h3 mb-sm">Structural UML Redacted</h3>
-<p class="text-body font-body text-on-surface-variant mb-lg">A detailed UML Sequence and Class Diagram mapping the 14 micro-services and their interaction through the event bus is available for private review. Key components include the Idempotent Gateways, Distributed Sagas, and Real-time Reconciliation Engine.</p>
-<a class="bg-primary text-on-primary font-manrope font-bold px-lg py-3 rounded-lg flex items-center gap-sm mx-auto hover:brightness-110 active:scale-95 transition-all no-underline w-fit" href="mailto:chewsinai2002@gmail.com?subject=Request%20architecture%20documentation%20%28case%20study%29">Request High-Res Architecture Docs <span class="font-code-sm">→</span></a>
+<div class="flex flex-wrap gap-sm gap-y-2 mt-auto pt-md border-t border-slate-800/50 w-full">
+<a class="text-primary font-label-caps text-xs hover:underline" href="projects.html#warehouse-wms">View on Projects</a>
 </div>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-md mt-lg">
-<div class="p-md flat-tech-card rounded-lg">
-<h4 class="text-lg font-bold mb-xs text-primary">Idempotency Layer</h4>
-<p class="text-sm text-on-surface-variant">Eliminated duplicate transaction risk through a global state-aware gateway that rejects re-sent packets at the edge.</p>
+<div class="md:col-span-6 p-md md:p-lg glass-card rounded-xl overflow-hidden border border-slate-800/80 hover:border-sky-400/25 flex flex-col gap-sm h-full min-h-0 group transition-colors duration-200">
+<div class="flex flex-wrap gap-xs">
+<span class="bg-slate-800 text-secondary font-label-caps px-2 py-1 rounded text-[10px]">SHIPMENTS</span>
+<span class="bg-slate-800 text-outline font-label-caps px-2 py-1 rounded text-[10px]">PRIVATE</span>
 </div>
-<div class="p-md flat-tech-card rounded-lg">
-<h4 class="text-lg font-bold mb-xs text-primary">Distributed Sagas</h4>
-<p class="text-sm text-on-surface-variant">Managed multi-service transactions using the Saga pattern for eventual consistency without blocking operations.</p>
-</div>
-<div class="p-md flat-tech-card rounded-lg">
-<h4 class="text-lg font-bold mb-xs text-primary">Service Mesh</h4>
-<p class="text-sm text-on-surface-variant">Implemented Istio for secure service-to-service communication, mTLS encryption, and advanced traffic steering.</p>
-</div>
-</div>
-</section>
-<!-- Performance Impact Section -->
-<section class="mb-xl">
-<div class="flex flex-col gap-md mb-lg">
-<span class="text-label-caps font-label-caps text-primary">03 / PERFORMANCE IMPACT</span>
-<h2 class="text-h2 font-h2">Architectural Outcomes</h2>
-<p class="text-body font-body text-on-surface-variant">The shift from a monolith to a distributed architecture resulted in measurable gains across reliability, scalability, and developer velocity.</p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-4 gap-md">
-<div class="p-md bg-surface-container-high border-t-4 border-secondary rounded-b-lg">
-<span class="text-h1 font-h1 text-secondary">60%</span>
-<p class="text-body font-body text-on-surface mt-sm">P99 Latency Reduction</p>
-</div>
-<div class="p-md bg-surface-container-high border-t-4 border-secondary rounded-b-lg">
-<span class="text-h1 font-h1 text-secondary">4X</span>
-<p class="text-body font-body text-on-surface mt-sm">Peak Throughput Multiplier</p>
-</div>
-<div class="p-md bg-surface-container-high border-t-4 border-secondary rounded-b-lg">
-<span class="text-h1 font-h1 text-secondary">99.99</span>
-<p class="text-body font-body text-on-surface mt-sm">Operational Availability (%)</p>
-</div>
-<div class="p-md bg-surface-container-high border-t-4 border-secondary rounded-b-lg">
-<span class="text-h1 font-h1 text-secondary">100%</span>
-<p class="text-body font-body text-on-surface mt-sm">Data Integrity Match</p>
+<h3 class="text-lg md:text-h3 font-h3 text-primary leading-tight">Lenovo Shipment Email Tool</h3>
+<p class="text-body font-body text-on-surface-variant leading-relaxed text-justify">PHP site for ops: upload shipment rows, pick who gets mail, and edit HTML templates. A cron script sends pre-alerts and reminders when they are due. A small lock file stops the same email going out twice if cron runs overlap. <span class="text-on-surface">Private repository</span>—GitHub access for collaborators upon request.</p>
+<div class="flex flex-wrap gap-sm gap-y-2 mt-auto pt-md border-t border-slate-800/50 w-full">
+<a class="text-primary font-label-caps text-xs hover:underline" href="https://github.com/chewsinai02/OpsShipmentEmailConsole" rel="noopener noreferrer" target="_blank">GitHub (private)</a>
+<a class="text-on-surface-variant font-label-caps text-xs hover:text-primary hover:underline" href="mailto:chewsinai2002@gmail.com?subject=Ops%20Shipment%20Email%20Console%20%E2%80%94%20question">Contact</a>
+<a class="text-on-surface-variant font-label-caps text-xs hover:text-primary hover:underline" href="projects.html#lenovo-shipment-email">View on Projects</a>
 </div>
 </div>
-</section>
-<!-- High-Level Takeaways -->
-<section class="p-lg flat-tech-card rounded-lg bg-surface-container-lowest overflow-hidden relative">
-<div class="absolute top-0 right-0 p-lg opacity-10">
-<span class="material-symbols-outlined text-[160px]" data-icon="architecture">architecture</span>
+<div class="md:col-span-12 p-md md:p-lg glass-card rounded-xl overflow-hidden border border-slate-800/80 hover:border-sky-400/25 flex flex-col gap-sm h-full min-h-0 group transition-colors duration-200">
+<div class="flex flex-wrap gap-xs items-center justify-between">
+<div class="flex flex-wrap gap-xs">
+<span class="bg-slate-800 text-secondary font-label-caps px-2 py-1 rounded text-[10px]">MAIL · PDF · AI · MYCEIDS</span>
+<span class="bg-slate-800 text-green-400/90 font-label-caps px-2 py-1 rounded text-[10px] border border-green-800/40">PUBLIC</span>
 </div>
-<div class="relative z-10 flex flex-col gap-md">
-<h2 class="text-h2 font-h2">Architectural Philosophy</h2>
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-lg">
-<div class="flex flex-col gap-sm">
-<h3 class="text-h3 font-h3 text-primary">State vs. Statelessness</h3>
-<p class="text-body font-body text-on-surface-variant">Moving the burden of state from the compute layer to dedicated persistent event stores allowed for instantaneous container auto-scaling. This fundamentally changed how the system reacts to market volatility.</p>
 </div>
-<div class="flex flex-col gap-sm">
-<h3 class="text-h3 font-h3 text-primary">Isolation of Concerns</h3>
-<p class="text-body font-body text-on-surface-variant">By enforcing strict bounded contexts, the failure of a non-critical micro-service (e.g., reporting) no longer impacts the core settlement flow, providing true system-wide resilience.</p>
+<h3 class="text-lg md:text-h3 font-h3 text-primary leading-tight">AI Mail &amp; Document Pipeline (MyCeids)</h3>
+<p class="text-body font-body text-on-surface-variant leading-relaxed text-justify">End-to-end for teams and bundles: documents enter <span class="text-on-surface">either</span> from <span class="text-on-surface">email attachments</span> (PHP <span class="text-on-surface">email_receiver_system</span>) <span class="text-on-surface">or</span> from <span class="text-on-surface">manual upload</span>—not both required. Supported inputs include <span class="text-on-surface">ZIP</span> and Office/images; the pipeline unpacks where needed, <span class="text-on-surface">converts to PDF</span>, and can <span class="text-on-surface">compress</span> large PDFs before <span class="text-on-surface">Gemini</span> classifies and extracts fields. <span class="text-on-surface">Node + Playwright</span> (headless Chromium) then runs the MyCeids upload steps on the server. Vite + React UI for review and hand-off.</p>
+<div class="flex flex-wrap gap-xs">
+<span class="tech-badge text-on-surface font-code-sm text-code-sm px-2 py-1 rounded">Vite</span>
+<span class="tech-badge text-on-surface font-code-sm text-code-sm px-2 py-1 rounded">React</span>
+<span class="tech-badge text-on-surface font-code-sm text-code-sm px-2 py-1 rounded">PHP</span>
+<span class="tech-badge text-on-surface font-code-sm text-code-sm px-2 py-1 rounded">Gemini</span>
+<span class="tech-badge text-on-surface font-code-sm text-code-sm px-2 py-1 rounded">Playwright</span>
+</div>
+<div class="flex flex-wrap gap-sm gap-y-2 mt-auto pt-md border-t border-slate-800/50 w-full">
+<a class="text-primary font-label-caps text-xs hover:underline" href="https://github.com/chewsinai02/userUploadPortal" rel="noopener noreferrer" target="_blank">GitHub</a>
+<a class="text-on-surface-variant font-label-caps text-xs hover:text-primary hover:underline" href="MyCEIDS_Central_Hub_User_Manual_portfolio.pdf" rel="noopener noreferrer" target="_blank">User manual (PDF)</a>
+<a class="text-on-surface-variant font-label-caps text-xs hover:text-primary hover:underline" href="projects.html#myceids-pipeline">View on Projects</a>
+</div>
+</div>
+<div class="md:col-span-12 p-md md:p-lg glass-card rounded-xl overflow-hidden border border-slate-800/80 hover:border-sky-400/25 flex flex-col gap-sm h-full min-h-0 group transition-colors duration-200">
+<div class="flex flex-wrap gap-xs">
+<span class="bg-slate-800 text-secondary font-label-caps px-2 py-1 rounded text-[10px]">API</span>
+<span class="bg-slate-800 text-green-400/90 font-label-caps px-2 py-1 rounded text-[10px] border border-green-800/40">PUBLIC</span>
+</div>
+<h3 class="text-lg md:text-h3 font-h3 text-primary leading-tight">API Log Platform</h3>
+<p class="text-body font-body text-on-surface-variant leading-relaxed text-justify">Explains failures (missing fields, timeouts, flaky runs). Users <span class="text-on-surface">re-upload or re-trigger the same JSON</span>—less support load.</p>
+<div class="flex flex-wrap gap-xs">
+<span class="tech-badge text-on-surface font-code-sm px-2 py-1 rounded">JSON replay</span>
+<span class="tech-badge text-on-surface font-code-sm px-2 py-1 rounded">Diagnostics</span>
+</div>
+<div class="flex flex-wrap gap-sm gap-y-2 mt-auto pt-md border-t border-slate-800/50 w-full">
+<a class="text-primary font-label-caps text-xs hover:underline" href="https://github.com/chewsinai02/apiLog" rel="noopener noreferrer" target="_blank">GitHub</a>
+<a class="text-on-surface-variant font-label-caps text-xs hover:text-primary hover:underline" href="projects.html#api-log-platform">View on Projects</a>
 </div>
 </div>
 </div>
-</section>
+</div>
+<div id="professional-context" class="scroll-mt-24 border-t border-slate-800/80 px-5 sm:px-6 lg:px-8 xl:px-10 py-5 md:py-6">
+<div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 lg:gap-10 w-full">
+<div class="min-w-0 flex-1 flex flex-col gap-3">
+<span class="text-label-caps font-label-caps text-primary">PROFESSIONAL CONTEXT</span>
+<h2 class="text-h2 font-h2 text-on-surface text-balance">Professional context</h2>
+<p class="text-body font-body text-on-surface-variant leading-relaxed text-justify hyphens-auto">Logistics Billing Automation, Warehouse Management System, Lenovo Shipment Email Tool, AI Mail &amp; Document Pipeline (MyCeids), and API Log Platform are the same entries as on <a class="text-primary hover:underline font-medium" href="projects.html">Projects</a>, with matching anchors for <a class="text-primary hover:underline font-medium" href="projects.html#logistics-billing">Logistics Billing</a>, <a class="text-primary hover:underline font-medium" href="projects.html#warehouse-wms">WMS</a>, <a class="text-primary hover:underline font-medium" href="projects.html#lenovo-shipment-email">Lenovo Shipment</a>, <a class="text-primary hover:underline font-medium" href="projects.html#myceids-pipeline">MyCeids</a>, and <a class="text-primary hover:underline font-medium" href="projects.html#api-log-platform">API Log Platform</a>. Patient Care Real-Time Management and Pet Adoption System complete the catalog for academic and public portfolio context. Use each card&apos;s GitHub or contact links for private repositories.</p>
+<a class="inline-flex items-center gap-xs bg-primary text-on-primary font-manrope font-bold px-lg py-3 rounded-lg hover:brightness-110 active:scale-95 transition-all no-underline w-fit mt-2" href="mailto:chewsinai2002@gmail.com?subject=Portfolio%20%E2%80%94%20discussion">Discuss this portfolio <span class="material-symbols-outlined text-base">mail</span></a>
+</div>
+<div class="flex flex-col gap-2.5 shrink-0 lg:w-48 xl:w-52 lg:border-l lg:border-slate-800/80 lg:pl-8 lg:pt-1">
+<span class="text-label-caps font-label-caps text-on-surface-variant">On Projects</span>
+<nav class="flex flex-col gap-2 font-manrope text-sm font-medium" aria-label="Projects deep links">
+<a class="text-primary hover:underline" href="projects.html#logistics-billing">Logistics Billing</a>
+<a class="text-primary hover:underline" href="projects.html#warehouse-wms">Warehouse WMS</a>
+<a class="text-primary hover:underline" href="projects.html#lenovo-shipment-email">Lenovo Shipment</a>
+<a class="text-primary hover:underline" href="projects.html#myceids-pipeline">MyCeids pipeline</a>
+<a class="text-primary hover:underline" href="projects.html#api-log-platform">API Log Platform</a>
+</nav>
+</div>
+</div>
+</div>
+</div>
 </main>
 <!-- Footer Component (from COMPONENTS_18) -->
-<footer class="bg-slate-950 w-full py-12 px-12 flex flex-col md:flex-row justify-between items-center gap-6 mt-20 border-t border-slate-900">
+<footer class="bg-slate-950 w-full py-12 mt-12 md:mt-16 border-t border-slate-900">
+<div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-lg flex flex-col md:flex-row justify-between items-center gap-6">
 <a class="text-lg font-black text-slate-50 font-manrope hover:text-sky-300 transition-colors" href="index.html">Chew Sin Ai</a>
 <div class="font-manrope text-xs uppercase tracking-widest text-slate-500">© 2026 Modern Architect Portfolio. Built with Precision.</div>
 <div class="flex gap-8">
@@ -321,6 +306,7 @@
 <a class="font-manrope text-xs uppercase tracking-widest text-slate-500 hover:text-sky-400 transition-colors duration-300 opacity-80 hover:opacity-100 no-underline" href="https://github.com/chewsinai02" rel="noopener noreferrer" target="_blank">GitHub</a>
 <a class="font-manrope text-xs uppercase tracking-widest text-slate-500 hover:text-sky-400 transition-colors duration-300 opacity-80 hover:opacity-100 no-underline" href="https://github.com/chewsinai02/portfolio" rel="noopener noreferrer" target="_blank">Source Code</a>
 <a class="font-manrope text-xs uppercase tracking-widest text-slate-500 hover:text-sky-400 transition-colors duration-300 opacity-80 hover:opacity-100 no-underline" href="mailto:chewsinai2002@gmail.com?subject=Privacy%20inquiry">Privacy</a>
+</div>
 </div>
 </footer>
 <script>
