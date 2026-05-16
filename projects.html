@@ -3,6 +3,15 @@
 <html class="dark" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta name="description" content="Seven full-stack and logistics projects: Laravel, Flutter, JavaFX, React, PHP, and AI document pipelines."/>
+<meta property="og:title" content="Projects | Chew Sin Ai"/>
+<meta property="og:description" content="Project gallery for Chew Sin Ai — healthcare, logistics, and AI automation work."/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://chewsinai02.github.io/portfolio/projects.html"/>
+<meta property="og:image" content="https://chewsinai02.github.io/portfolio/assets/og-image.svg"/>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml"/>
+<title>Projects | Chew Sin Ai</title>
+
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
@@ -116,23 +125,22 @@
         }
     </style>
 </head>
-<body class="bg-background text-on-background font-body selection:bg-primary-container selection:text-on-primary-container">
+<body class="bg-background text-on-background font-body selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col">
 <!-- TopAppBar Components from DataStore -->
-<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-12 h-16 bg-slate-900/80 backdrop-blur-md border-b border-slate-800">
-<a class="text-xl font-bold tracking-tighter text-slate-50 font-h1 hover:text-sky-200 transition-colors shrink-0" href="index.html">Chew Sin Ai</a>
-<nav class="hidden md:flex items-center gap-md">
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 md:px-12 h-16 bg-slate-900/80 backdrop-blur-md border-b border-slate-800">
+<a class="text-xl font-bold tracking-tighter text-slate-50 font-manrope hover:text-sky-200 transition-colors shrink-0" href="index.html">Chew Sin Ai</a>
+<button type="button" class="md:hidden flex items-center justify-center w-10 h-10 text-slate-400 hover:text-sky-400 bg-transparent border-0 shrink-0" data-mobile-menu-toggle aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span class="material-symbols-outlined">menu</span></button>
+<nav id="site-nav" data-mobile-nav class="hidden md:flex fixed md:static inset-x-0 top-16 md:top-auto z-40 flex-col md:flex-row items-stretch md:items-center gap-1 md:gap-md p-4 md:p-0 bg-slate-900/95 md:bg-transparent backdrop-blur-md md:backdrop-blur-none border-b md:border-0 border-slate-800">
 <a class="text-sky-400 border-b-2 border-sky-400 pb-1 font-manrope text-sm font-medium tracking-tight" href="projects.html">Projects</a>
-<a class="text-slate-400 hover:text-sky-300 hover:bg-slate-800/50 transition-all px-2 py-1 rounded font-manrope text-sm font-medium tracking-tight active:scale-95 duration-200" href="case-study.html#overview">Case Studies</a>
-<a class="text-slate-400 hover:text-sky-300 hover:bg-slate-800/50 transition-all px-2 py-1 rounded font-manrope text-sm font-medium tracking-tight active:scale-95 duration-200" href="case-study.html#professional-context">Context</a>
-<a class="text-slate-400 hover:text-sky-300 hover:bg-slate-800/50 transition-all px-2 py-1 rounded font-manrope text-sm font-medium tracking-tight active:scale-95 duration-200" href="about.html">About</a>
+<a class="text-slate-400 hover:text-sky-300 hover:bg-slate-800/50 transition-all px-2 py-2 md:py-1 rounded font-manrope text-sm font-medium tracking-tight" href="case-study.html">Case Studies</a>
+<a class="text-slate-400 hover:text-sky-300 hover:bg-slate-800/50 transition-all px-2 py-2 md:py-1 rounded font-manrope text-sm font-medium tracking-tight" href="about.html">About</a>
 </nav>
 <div class="flex items-center gap-sm shrink-0">
-<a class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-sky-400 transition-colors no-underline" href="https://github.com/chewsinai02" rel="noopener noreferrer" target="_blank" aria-label="GitHub profile">terminal</a>
-<button type="button" class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-sky-400 transition-colors bg-transparent border-0 p-0 font-inherit" data-copy-page-link="" aria-label="Copy page link">share</button>
-<a class="inline-flex items-center justify-center bg-primary text-on-primary font-label-caps px-md py-xs rounded hover:opacity-90 active:scale-95 transition-all ml-md" href="https://drive.google.com/file/d/1fuY4DvwW3KRiucmMZ1CRulHg6cifS1qi/view?usp=drive_link" rel="noopener noreferrer" target="_blank">Resume</a>
+<a class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-sky-400 transition-colors no-underline hidden sm:inline" href="https://github.com/chewsinai02" rel="noopener noreferrer" target="_blank" aria-label="GitHub profile">terminal</a>
+<a class="inline-flex items-center justify-center bg-primary text-on-primary font-label-caps px-md py-xs rounded hover:opacity-90 active:scale-95 transition-all text-xs md:text-sm" href="https://drive.google.com/file/d/1fuY4DvwW3KRiucmMZ1CRulHg6cifS1qi/view?usp=drive_link" rel="noopener noreferrer" target="_blank">Resume</a>
 </div>
 </header>
-<main class="max-w-[1280px] mx-auto px-lg py-xl mt-16">
+<main class="max-w-[1280px] mx-auto px-lg py-xl mt-16 flex-1">
 <!-- Hero Section -->
 <section class="mb-xl">
 <h1 class="font-h1 text-h1 mb-md text-on-surface">Project Engineering</h1>
@@ -145,7 +153,7 @@
 <!-- 1. Patient Care Management (Featured Private Project) -->
 <div class="md:col-span-8 flex flex-col glass-card rounded-lg overflow-hidden group border border-slate-800/80">
 <div class="relative h-72 overflow-hidden border-b border-slate-800">
-<img alt="Patient care management system — SUC Hospital web and mobile interfaces" class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" data-alt="SUC Hospital application and website: admin dashboard, messaging, calendar, nurse dashboard, and patient mobile app" src="image.png"/>
+<img alt="Patient care management system — SUC Hospital web and mobile interfaces" class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" data-alt="SUC Hospital application and website: admin dashboard, messaging, calendar, nurse dashboard, and patient mobile app" src="assets/image.png"/>
 <div class="absolute top-4 left-4 flex gap-xs">
 <span class="bg-slate-900/90 text-sky-400 border border-sky-400/30 font-label-caps px-xs py-1 rounded text-[10px] backdrop-blur-sm">PROPRIETARY ARCHITECTURE</span>
 <span class="bg-secondary-container/90 text-on-secondary-container font-label-caps px-xs py-1 rounded text-[10px] backdrop-blur-sm">HEALTHCARE</span>
@@ -156,7 +164,11 @@
 <h3 class="font-h3 text-lg md:text-h3 text-primary leading-tight">Patient Care Real-Time Management</h3>
 <span class="material-symbols-outlined text-outline">verified</span>
 </div>
-<p class="font-body text-on-surface-variant text-body leading-relaxed mb-md text-justify">Real-time communication and management between families and hospitals. Laravel PHP web app for doctor, nurse, nurse admin, and admin; Flutter mobile app for patients.</p>
+<p class="font-body text-on-surface-variant text-body leading-relaxed mb-sm text-justify">Real-time communication and management between families and hospitals. Laravel PHP web app for doctor, nurse, nurse admin, and admin; Flutter mobile app for patients.</p>
+<ul class="font-body text-sm text-secondary mb-md space-y-1 list-disc list-inside">
+<li>Real-time messaging between care teams and families</li>
+<li>Dual codebase: Laravel admin portal + Flutter patient app</li>
+</ul>
 <div class="flex flex-wrap gap-xs mb-lg">
 <span class="tech-badge text-on-surface font-code-sm text-code-sm px-xs py-1 rounded">Laravel</span>
 <span class="tech-badge text-on-surface font-code-sm text-code-sm px-xs py-1 rounded">Flutter</span>
@@ -249,7 +261,7 @@
 <span class="tech-badge text-on-surface font-code-sm text-code-sm px-xs py-1 rounded">Java</span>
 <span class="tech-badge text-on-surface font-code-sm text-code-sm px-xs py-1 rounded">PHP</span>
 </div>
-<a class="mt-auto w-full flex items-center justify-center gap-xs bg-surface-container-high border border-primary/20 text-primary font-label-caps text-xs py-sm rounded hover:bg-primary/10 transition-colors no-underline" href="case-study.html#professional-context"><span class="material-symbols-outlined text-sm">work</span> Professional context</a>
+<a class="mt-auto w-full flex items-center justify-center gap-xs bg-surface-container-high border border-primary/20 text-primary font-label-caps text-xs py-sm rounded hover:bg-primary/10 transition-colors no-underline" href="projects.html#warehouse-wms"><span class="material-symbols-outlined text-sm">work</span> Professional context</a>
 </div>
 </div>
 <!-- 5. Lenovo shipment email tool (PHP + cron) — layout matches Logistics card -->
@@ -291,7 +303,12 @@
 <span class="text-[10px] text-slate-500 font-label-caps">PUBLIC · MYCEIDS</span>
 </div>
 <h3 class="font-h3 text-lg md:text-h3 mb-xs text-primary leading-tight">AI Mail &amp; Document Pipeline (MyCeids)</h3>
-<p class="font-body text-on-surface-variant text-body leading-relaxed mb-md text-justify">End-to-end for teams and bundles: documents enter <span class="text-on-surface">either</span> from <span class="text-on-surface">email attachments</span> (PHP <span class="text-on-surface">email_receiver_system</span>) <span class="text-on-surface">or</span> from <span class="text-on-surface">manual upload</span>—not both required. Supported inputs include <span class="text-on-surface">ZIP</span> and Office/images; the pipeline unpacks where needed, <span class="text-on-surface">converts to PDF</span>, and can <span class="text-on-surface">compress</span> large PDFs before <span class="text-on-surface">Gemini</span> classifies and extracts fields. <span class="text-on-surface">Node + Playwright</span> (headless Chromium) then runs the MyCeids upload steps on the server. Vite + React UI for review and hand-off.</p>
+<p class="font-body text-on-surface-variant text-body leading-relaxed mb-sm text-justify">End-to-end for teams and bundles: documents enter <span class="text-on-surface">either</span> from <span class="text-on-surface">email attachments</span> (PHP <span class="text-on-surface">email_receiver_system</span>) <span class="text-on-surface">or</span> from <span class="text-on-surface">manual upload</span>—not both required. Supported inputs include <span class="text-on-surface">ZIP</span> and Office/images; the pipeline unpacks where needed, <span class="text-on-surface">converts to PDF</span>, and can <span class="text-on-surface">compress</span> large PDFs before <span class="text-on-surface">Gemini</span> classifies and extracts fields. <span class="text-on-surface">Node + Playwright</span> (headless Chromium) then runs the MyCeids upload steps on the server. Vite + React UI for review and hand-off.</p>
+<ul class="font-body text-sm text-secondary mb-sm space-y-1 list-disc list-inside">
+<li>Dual entry: email attachments or manual upload (ZIP, Office, images)</li>
+<li>Playwright + Gemini pipeline reduces manual MyCeids data entry</li>
+</ul>
+
 <div class="flex flex-wrap gap-xs mb-sm">
 <span class="tech-badge text-on-surface font-code-sm text-code-sm px-xs py-1 rounded">Vite</span>
 <span class="tech-badge text-on-surface font-code-sm text-code-sm px-xs py-1 rounded">React</span>
@@ -303,7 +320,7 @@
 <div class="p-md bg-slate-900/50 border-t border-slate-800">
 <div class="grid grid-cols-2 gap-sm">
 <a class="bg-primary text-on-primary font-label-caps text-sm py-sm rounded hover:opacity-90 text-center no-underline inline-flex items-center justify-center gap-1" href="https://github.com/chewsinai02/userUploadPortal" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-sm">code</span> GITHUB</a>
-<a class="border border-outline text-on-surface font-label-caps text-sm py-sm rounded hover:border-primary transition-all text-center no-underline inline-flex items-center justify-center gap-1" href="MyCEIDS_Central_Hub_User_Manual_portfolio.pdf" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-sm">menu_book</span> USER MANUAL (PDF)</a>
+<a class="border border-outline text-on-surface font-label-caps text-sm py-sm rounded hover:border-primary transition-all text-center no-underline inline-flex items-center justify-center gap-1" href="assets/MyCEIDS_Central_Hub_User_Manual_portfolio.pdf" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-sm">menu_book</span> USER MANUAL (PDF)</a>
 </div>
 </div>
 </div>
@@ -348,33 +365,19 @@
 </div>
 </main>
 <!-- Footer Components from DataStore -->
-<footer class="bg-slate-950 w-full py-12 px-12 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-6">
-<div class="flex flex-col gap-xs items-center md:items-start">
-<span class="text-lg font-black text-slate-50 font-h2">Modern Architect Portfolio</span>
-<p class="font-manrope text-xs uppercase tracking-widest text-slate-500">© 2026 Modern Architect Portfolio. Built with Precision.</p>
+<footer class="mt-auto w-full bg-slate-950 py-12 px-6 md:px-12 border-t border-slate-900">
+<div class="max-w-[1280px] mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex flex-col gap-1 items-center md:items-start text-center md:text-left">
+<a class="text-lg font-black text-slate-50 font-manrope hover:text-sky-300 transition-colors" href="index.html">Chew Sin Ai</a>
+<p class="font-manrope text-xs uppercase tracking-widest text-slate-500">&copy; 2026 Chew Sin Ai</p>
 </div>
-<div class="flex gap-lg">
-<a class="text-slate-500 hover:text-sky-400 transition-colors duration-300 font-manrope text-xs uppercase tracking-widest opacity-80 hover:opacity-100 no-underline" href="https://www.linkedin.com/in/chewsinai02" rel="noopener noreferrer" target="_blank">LinkedIn</a>
-<a class="text-slate-500 hover:text-sky-400 transition-colors duration-300 font-manrope text-xs uppercase tracking-widest opacity-80 hover:opacity-100 no-underline" href="https://github.com/chewsinai02" rel="noopener noreferrer" target="_blank">GitHub</a>
-<a class="text-slate-500 hover:text-sky-400 transition-colors duration-300 font-manrope text-xs uppercase tracking-widest opacity-80 hover:opacity-100 no-underline" href="https://github.com/chewsinai02/portfolio" rel="noopener noreferrer" target="_blank">Source Code</a>
-<a class="text-slate-500 hover:text-sky-400 transition-colors duration-300 font-manrope text-xs uppercase tracking-widest opacity-80 hover:opacity-100 no-underline" href="mailto:chewsinai2002@gmail.com?subject=Privacy%20inquiry">Privacy</a>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="font-manrope text-xs uppercase tracking-widest text-slate-500 hover:text-sky-400 transition-colors no-underline" href="https://www.linkedin.com/in/chew-s-41810a121" rel="noopener noreferrer" target="_blank">LinkedIn</a>
+<a class="font-manrope text-xs uppercase tracking-widest text-slate-500 hover:text-sky-400 transition-colors no-underline" href="https://github.com/chewsinai02" rel="noopener noreferrer" target="_blank">GitHub</a>
+<a class="font-manrope text-xs uppercase tracking-widest text-slate-500 hover:text-sky-400 transition-colors no-underline" href="https://github.com/chewsinai02/portfolio" rel="noopener noreferrer" target="_blank">Source Code</a>
+<a class="font-manrope text-xs uppercase tracking-widest text-slate-500 hover:text-sky-400 transition-colors no-underline" href="privacy.html">Privacy</a>
+</div>
 </div>
 </footer>
-<!-- FAB for quick action -->
-<a class="fixed bottom-xs right-xs bg-primary text-on-primary p-md rounded-full shadow-lg active:scale-95 transition-transform flex items-center justify-center z-50 no-underline hover:opacity-90" href="mailto:chewsinai2002@gmail.com?subject=Portfolio%20contact" aria-label="Email contact"><span class="material-symbols-outlined">mail</span></a>
-<script>
-(function () {
-  function copyPageLink() {
-    var url = window.location.href;
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(url);
-    } else {
-      window.prompt("Copy this link:", url);
-    }
-  }
-  document.querySelectorAll("[data-copy-page-link]").forEach(function (el) {
-    el.addEventListener("click", copyPageLink);
-  });
-})();
-</script>
+<script src="assets/site.js"></script>
 </body></html>

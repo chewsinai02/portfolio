@@ -1,327 +1,178 @@
 <!DOCTYPE html>
-
-<html class="dark" lang="en"><head>
+<html class="dark" lang="en">
+<head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta name="description" content="Annotated project index aligned with Projects: repos, documentation, demos, PDFs, and contact paths for recruiters—including private-repo and employer-context notes."/>
+<meta name="description" content="Deep-dive case studies: Patient Care real-time hospital system and MyCeids AI document pipeline — problem, role, stack, and outcomes."/>
+<meta property="og:title" content="Case Studies | Chew Sin Ai"/>
+<meta property="og:description" content="In-depth write-ups of flagship portfolio projects for recruiters and hiring managers."/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://chewsinai02.github.io/portfolio/case-study.html"/>
+<meta property="og:image" content="https://chewsinai02.github.io/portfolio/assets/og-image.svg"/>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml"/>
 <title>Case Studies | Chew Sin Ai</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Space+Grotesk:wght@400;500;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "on-secondary-fixed-variant": "#005236",
-                        "secondary-fixed-dim": "#4edea3",
-                        "inverse-on-surface": "#283044",
-                        "on-secondary": "#003824",
-                        "on-tertiary-fixed": "#07006c",
-                        "on-tertiary": "#1000a9",
-                        "surface-container-low": "#131b2e",
-                        "primary-fixed": "#c4e7ff",
-                        "surface": "#0b1326",
-                        "error-container": "#93000a",
-                        "surface-variant": "#2d3449",
-                        "surface-container-highest": "#2d3449",
-                        "on-background": "#dae2fd",
-                        "secondary-fixed": "#6ffbbe",
-                        "surface-container": "#171f33",
-                        "on-tertiary-fixed-variant": "#2f2ebe",
-                        "on-surface": "#dae2fd",
-                        "inverse-primary": "#00668a",
-                        "on-primary-fixed-variant": "#004c69",
-                        "secondary": "#4edea3",
-                        "on-primary-container": "#004965",
-                        "tertiary-container": "#a7a9ff",
-                        "surface-container-lowest": "#060e20",
-                        "tertiary": "#c7c8ff",
-                        "surface-dim": "#0b1326",
-                        "on-primary-fixed": "#001e2c",
-                        "outline-variant": "#3e484f",
-                        "error": "#ffb4ab",
-                        "outline": "#87929a",
-                        "background": "#0b1326",
-                        "inverse-surface": "#dae2fd",
-                        "on-error": "#690005",
-                        "surface-tint": "#7bd0ff",
-                        "secondary-container": "#00a572",
-                        "surface-container-high": "#222a3d",
-                        "primary": "#8ed5ff",
-                        "on-error-container": "#ffdad6",
-                        "primary-container": "#38bdf8",
-                        "on-surface-variant": "#bdc8d1",
-                        "on-secondary-container": "#00311f",
-                        "on-secondary-fixed": "#002113",
-                        "on-tertiary-container": "#2b29bb",
-                        "tertiary-fixed": "#e1e0ff",
-                        "on-primary": "#00354a",
-                        "surface-bright": "#31394d",
-                        "primary-fixed-dim": "#7bd0ff",
-                        "tertiary-fixed-dim": "#c0c1ff"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0.125rem",
-                        "lg": "0.25rem",
-                        "xl": "0.5rem",
-                        "full": "0.75rem"
-                    },
-                    "spacing": {
-                        "base": "4px",
-                        "md": "24px",
-                        "xs": "8px",
-                        "gutter": "24px",
-                        "lg": "48px",
-                        "sm": "16px",
-                        "xl": "80px",
-                        "container-max": "1280px"
-                    },
-                    "fontFamily": {
-                        "body": ["Inter"],
-                        "code-sm": ["Space Grotesk"],
-                        "h3": ["Manrope"],
-                        "h1": ["Manrope"],
-                        "label-caps": ["Space Grotesk"],
-                        "h2": ["Manrope"],
-                        "manrope": ["Manrope"]
-                    },
-                    "fontSize": {
-                        "body": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                        "code-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "500"}],
-                        "h3": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
-                        "h1": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800"}],
-                        "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700"}],
-                        "h2": ["32px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "700"}]
-                    }
-                },
-            },
-        }
-    </script>
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        background: "#0b1326",
+        primary: "#8ed5ff",
+        secondary: "#4edea3",
+        "on-surface": "#dae2fd",
+        "on-surface-variant": "#bdc8d1",
+        outline: "#87929a",
+        "surface-container": "#171f33",
+        "surface-container-high": "#222a3d"
+      },
+      spacing: { md: "24px", lg: "48px", xl: "80px", gutter: "24px" },
+      fontFamily: {
+        body: ["Inter"],
+        h1: ["Manrope"],
+        h2: ["Manrope"],
+        h3: ["Manrope"],
+        "label-caps": ["Space Grotesk"],
+        manrope: ["Manrope"]
+      },
+      fontSize: {
+        body: ["16px", { lineHeight: "1.6" }],
+        h1: ["48px", { lineHeight: "1.2", fontWeight: "800" }],
+        h2: ["32px", { lineHeight: "1.3", fontWeight: "700" }],
+        h3: ["24px", { lineHeight: "1.4", fontWeight: "600" }],
+        "label-caps": ["12px", { letterSpacing: "0.1em", fontWeight: "700" }]
+      }
+    }
+  }
+};
+</script>
 <style>
-        .material-symbols-outlined {
-            font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
-        }
-        .glass-card {
-            background: rgba(15, 23, 42, 0.45);
-            backdrop-filter: blur(12px);
-            transition: border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
-        }
-        .glass-card:hover {
-            background: rgba(15, 23, 42, 0.68);
-            box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.12), 0 12px 40px -12px rgba(0, 0, 0, 0.45);
-        }
-        .case-study-sheet {
-            box-shadow: 0 0 0 1px rgba(51, 65, 85, 0.35), 0 25px 50px -12px rgba(0, 0, 0, 0.55);
-        }
-        .tech-badge {
-            background: rgba(23, 31, 51, 0.8);
-            border: 1px solid rgba(135, 146, 154, 0.2);
-        }
-    </style>
+.case-block { border: 1px solid rgba(51, 65, 85, 0.7); background: rgba(15, 23, 42, 0.5); }
+.tech-badge { background: rgba(23, 31, 51, 0.8); border: 1px solid rgba(135, 146, 154, 0.2); }
+</style>
 </head>
-<body class="bg-slate-950 text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
-<!-- TopAppBar Component (from COMPONENTS_18) -->
-<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-12 h-16 bg-slate-900/80 backdrop-blur-md border-b border-slate-800">
+<body class="bg-background text-on-surface font-body selection:bg-sky-500/30 min-h-screen flex flex-col">
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 md:px-12 h-16 bg-slate-900/80 backdrop-blur-md border-b border-slate-800">
 <a class="text-xl font-bold tracking-tighter text-slate-50 font-manrope hover:text-sky-200 transition-colors shrink-0" href="index.html">Chew Sin Ai</a>
-<nav class="hidden md:flex items-center gap-md">
-<a class="text-slate-400 hover:text-sky-300 hover:bg-slate-800/50 transition-all px-2 py-1 rounded font-manrope text-sm font-medium tracking-tight active:scale-95 duration-200" href="projects.html">Projects</a>
-<a class="text-sky-400 border-b-2 border-sky-400 pb-1 font-manrope text-sm font-medium tracking-tight" href="case-study.html#overview">Case Studies</a>
-<a class="text-slate-400 hover:text-sky-300 hover:bg-slate-800/50 transition-all px-2 py-1 rounded font-manrope text-sm font-medium tracking-tight active:scale-95 duration-200" href="case-study.html#professional-context">Context</a>
-<a class="text-slate-400 hover:text-sky-300 hover:bg-slate-800/50 transition-all px-2 py-1 rounded font-manrope text-sm font-medium tracking-tight active:scale-95 duration-200" href="about.html">About</a>
+<button type="button" class="md:hidden flex items-center justify-center w-10 h-10 text-slate-400 hover:text-sky-400 bg-transparent border-0 shrink-0" data-mobile-menu-toggle aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span class="material-symbols-outlined">menu</span></button>
+<nav id="site-nav" data-mobile-nav class="hidden md:flex fixed md:static inset-x-0 top-16 md:top-auto z-40 flex-col md:flex-row items-stretch md:items-center gap-1 md:gap-6 p-4 md:p-0 bg-slate-900/95 md:bg-transparent backdrop-blur-md md:backdrop-blur-none border-b md:border-0 border-slate-800">
+<a class="text-slate-400 hover:text-sky-300 px-2 py-2 md:py-1 rounded font-manrope text-sm font-medium" href="projects.html">Projects</a>
+<a class="text-sky-400 border-b-2 border-sky-400 pb-1 font-manrope text-sm font-medium" href="case-study.html">Case Studies</a>
+<a class="text-slate-400 hover:text-sky-300 px-2 py-2 md:py-1 rounded font-manrope text-sm font-medium" href="about.html">About</a>
 </nav>
-<div class="flex items-center gap-sm shrink-0">
-<a class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-sky-400 transition-colors no-underline" href="https://github.com/chewsinai02" rel="noopener noreferrer" target="_blank" aria-label="GitHub profile">terminal</a>
-<button type="button" class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-sky-400 transition-colors bg-transparent border-0 p-0 font-inherit" data-copy-page-link="" aria-label="Copy page link">share</button>
-<a class="inline-flex items-center justify-center bg-primary text-on-primary font-label-caps px-md py-xs rounded hover:opacity-90 active:scale-95 transition-all ml-md" href="https://drive.google.com/file/d/1fuY4DvwW3KRiucmMZ1CRulHg6cifS1qi/view?usp=drive_link" rel="noopener noreferrer" target="_blank">Resume</a>
+<div class="flex items-center gap-3 shrink-0">
+<a class="material-symbols-outlined text-slate-400 hover:text-sky-400 no-underline hidden sm:inline" href="https://github.com/chewsinai02" rel="noopener noreferrer" target="_blank" aria-label="GitHub">terminal</a>
+<a class="inline-flex bg-primary text-slate-900 font-label-caps text-xs md:text-sm px-4 py-2 rounded font-bold" href="https://drive.google.com/file/d/1fuY4DvwW3KRiucmMZ1CRulHg6cifS1qi/view?usp=drive_link" rel="noopener noreferrer" target="_blank">Resume</a>
 </div>
 </header>
-<main class="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-lg py-xl mt-16 pb-12 md:pb-16">
-<div class="case-study-sheet rounded-2xl border border-slate-800/70 bg-slate-900/45 backdrop-blur-xl overflow-hidden">
-<!-- Hero -->
-<div id="overview" class="scroll-mt-24 p-6 sm:p-8 lg:p-10 xl:p-12 flex flex-col gap-3 md:gap-4">
-<span class="text-label-caps font-label-caps text-secondary uppercase">Portfolio</span>
-<h1 class="text-h1 font-h1 text-on-surface">Case Studies</h1>
-<p class="text-body font-body text-on-surface-variant w-full leading-relaxed text-justify hyphens-auto md:text-lg text-slate-300/95">Annotated index of the same projects as <a class="text-primary hover:underline font-medium" href="projects.html">Projects</a>: repositories, documentation, demos, PDFs, and email where work is not public.</p>
-<p class="text-body font-body text-on-surface-variant w-full leading-relaxed text-justify hyphens-auto">Private repos still list their GitHub destinations; access is by request. For how employer-associated rows sit next to academic and public work, see <a class="text-primary hover:underline font-medium" href="#professional-context">Professional context</a>.</p>
+
+<main class="max-w-4xl mx-auto px-6 lg:px-8 py-24 mt-4 flex-1">
+<section class="mb-12">
+<span class="font-label-caps text-secondary uppercase tracking-widest">Deep dives</span>
+<h1 class="font-h1 text-h1 text-on-surface mt-2 mb-4">Case Studies</h1>
+<p class="text-on-surface-variant leading-relaxed max-w-2xl">Two flagship projects with problem, role, architecture, and outcomes. Full catalog with links is on <a class="text-primary hover:underline" href="projects.html">Projects</a>.</p>
+</section>
+
+<article id="patient-care" class="scroll-mt-28 case-block rounded-xl p-6 md:p-10 mb-12">
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="tech-badge text-sky-400 font-label-caps px-2 py-1 rounded text-[10px]">HEALTHCARE</span>
+<span class="tech-badge text-on-surface font-label-caps px-2 py-1 rounded text-[10px]">FYP · OWNED</span>
 </div>
-<div class="border-t border-slate-800/80 bg-slate-950/40 px-6 sm:px-8 lg:px-10 py-5 md:py-6 flex items-start gap-3 border-l-4 border-l-primary">
-<span class="material-symbols-outlined text-primary shrink-0 mt-0.5" data-icon="lock">lock</span>
-<div class="flex flex-col gap-1.5 min-w-0">
-<span class="text-label-caps font-label-caps text-primary">Confidentiality</span>
-<p class="text-body font-body text-on-surface-variant leading-relaxed text-justify hyphens-auto">No client-identifying hostnames, internal diagrams, or proprietary identifiers. Use each card&apos;s links for artifacts; use Professional context for a single hiring-oriented entry point.</p>
+<h2 class="font-h2 text-h2 text-primary mb-4">Patient Care Real-Time Management</h2>
+<div class="rounded-lg overflow-hidden border border-slate-800 mb-6">
+<img alt="Patient care system screenshots" class="w-full object-cover" src="assets/image.png"/>
 </div>
+
+<h3 class="font-h3 text-h3 text-on-surface mb-2">Problem</h3>
+<p class="text-on-surface-variant leading-relaxed mb-6 text-justify">Hospitals and families needed a single channel for care updates—not scattered phone calls and paper handoffs. Staff required role-based web access; patients needed a mobile-friendly way to stay informed.</p>
+
+<h3 class="font-h3 text-h3 text-on-surface mb-2">My role</h3>
+<p class="text-on-surface-variant leading-relaxed mb-6 text-justify">Sole developer for final-year project: designed database schema, built Laravel admin portal (doctor, nurse, nurse admin, admin), and Flutter patient app. Integrated Firebase for push and real-time features.</p>
+
+<h3 class="font-h3 text-h3 text-on-surface mb-2">Stack &amp; architecture</h3>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="tech-badge text-on-surface text-sm px-2 py-1 rounded">Laravel</span>
+<span class="tech-badge text-on-surface text-sm px-2 py-1 rounded">Flutter</span>
+<span class="tech-badge text-on-surface text-sm px-2 py-1 rounded">MySQL</span>
+<span class="tech-badge text-on-surface text-sm px-2 py-1 rounded">Firebase</span>
 </div>
-<div class="border-t border-slate-800/80 px-5 sm:px-6 lg:px-8 xl:px-10 py-6 md:py-8 scroll-mt-28">
-<h2 class="text-h2 font-h2 text-on-surface mb-5 md:mb-6">Documented projects</h2>
-<!-- Project catalog: 12-column rhythm (matches projects.html gutter) -->
-<div class="grid grid-cols-1 md:grid-cols-12 md:items-stretch gap-gutter">
-<div class="md:col-span-12 p-md md:p-lg glass-card rounded-xl overflow-hidden border border-slate-800/80 hover:border-sky-400/25 flex flex-col gap-sm h-full min-h-0 group transition-colors duration-200">
-<div class="flex flex-wrap gap-xs">
-<span class="bg-slate-800 text-sky-400 border border-sky-400/30 font-label-caps px-2 py-1 rounded text-[10px]">PROPRIETARY</span>
-<span class="bg-slate-800 text-secondary font-label-caps px-2 py-1 rounded text-[10px]">HEALTHCARE</span>
-</div>
-<h3 class="text-lg md:text-h3 font-h3 text-primary leading-tight">Patient Care Real-Time Management</h3>
-<p class="text-body font-body text-on-surface-variant leading-relaxed text-justify">Real-time communication and management between families and hospitals. Laravel PHP web app for doctor, nurse, nurse admin, and admin; Flutter mobile app for patients.</p>
-<div class="flex flex-wrap gap-xs">
-<span class="tech-badge text-on-surface font-code-sm text-code-sm px-2 py-1 rounded">Laravel</span>
-<span class="tech-badge text-on-surface font-code-sm text-code-sm px-2 py-1 rounded">Flutter</span>
-<span class="tech-badge text-on-surface font-code-sm text-code-sm px-2 py-1 rounded">MySQL</span>
-</div>
-<div class="flex flex-wrap gap-sm gap-y-2 mt-auto pt-md border-t border-slate-800/50 w-full">
+<p class="text-on-surface-variant leading-relaxed mb-6 text-justify">Split architecture: PHP backend for staff workflows and APIs; Flutter client for patients. Real-time messaging connects care teams and families without exposing internal hospital systems publicly.</p>
+
+<h3 class="font-h3 text-h3 text-on-surface mb-2">Outcome</h3>
+<ul class="text-on-surface-variant space-y-2 mb-6 list-disc list-inside">
+<li>Delivered working web + mobile demo used in FYP presentation and documentation</li>
+<li>Role-based portals reduce confusion between admin, clinical, and patient surfaces</li>
+<li>Reusable pattern for event-driven updates applicable to other notification-heavy domains</li>
+</ul>
+<div class="flex flex-wrap gap-4 pt-4 border-t border-slate-800">
 <a class="text-primary font-label-caps text-xs hover:underline" href="https://github.com/chewsinai02/fyp_website_v3" rel="noopener noreferrer" target="_blank">GitHub (web)</a>
 <a class="text-primary font-label-caps text-xs hover:underline" href="https://github.com/chewsinai02/fyp_patient_v1" rel="noopener noreferrer" target="_blank">GitHub (mobile)</a>
-<a class="text-on-surface-variant font-label-caps text-xs hover:text-primary hover:underline" href="https://drive.google.com/file/d/1uqflBjrnHDOGEecU7uxtFWoIWLSzCmLq/view?usp=drive_link" rel="noopener noreferrer" target="_blank">Documentation</a>
-<a class="text-on-surface-variant font-label-caps text-xs hover:text-primary hover:underline" href="https://drive.google.com/file/d/1ehxQjB8EzZM0Vi7ffV8jydR470f1j5u1/view?usp=drive_link" rel="noopener noreferrer" target="_blank">Demo</a>
+<a class="text-on-surface-variant font-label-caps text-xs hover:text-primary hover:underline" href="https://drive.google.com/file/d/1ehxQjB8EzZM0Vi7ffV8jydR470f1j5u1/view?usp=drive_link" rel="noopener noreferrer" target="_blank">Demo video</a>
+<a class="text-on-surface-variant font-label-caps text-xs hover:text-primary hover:underline" href="projects.html">View on Projects</a>
 </div>
+</article>
+
+<article id="myceids" class="scroll-mt-28 case-block rounded-xl p-6 md:p-10 mb-12">
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="tech-badge text-secondary font-label-caps px-2 py-1 rounded text-[10px]">AI · AUTOMATION</span>
+<span class="tech-badge text-green-400 font-label-caps px-2 py-1 rounded text-[10px]">PUBLIC</span>
 </div>
-<div class="md:col-span-6 p-md md:p-lg glass-card rounded-xl overflow-hidden border border-slate-800/80 hover:border-sky-400/25 flex flex-col gap-sm h-full min-h-0 group transition-colors duration-200">
-<div class="flex flex-wrap gap-xs">
-<span class="bg-slate-800 text-secondary font-label-caps px-2 py-1 rounded text-[10px]">JAVA DESKTOP</span>
-<span class="bg-slate-800 text-outline font-label-caps px-2 py-1 rounded text-[10px]">PUBLIC</span>
+<h2 class="font-h2 text-h2 text-primary mb-4">AI Mail &amp; Document Pipeline (MyCeids)</h2>
+
+<h3 class="font-h3 text-h3 text-on-surface mb-2">Problem</h3>
+<p class="text-on-surface-variant leading-relaxed mb-6 text-justify">Operations teams received bundles of documents via email and manual uploads. Re-keying data into MyCeids was slow, error-prone, and blocked on staff availability.</p>
+
+<h3 class="font-h3 text-h3 text-on-surface mb-2">My role</h3>
+<p class="text-on-surface-variant leading-relaxed mb-6 text-justify">Built the end-to-end pipeline: PHP email receiver and upload APIs, document conversion and compression, Gemini classification/extraction, Node + Playwright server automation, and Vite + React review UI.</p>
+
+<h3 class="font-h3 text-h3 text-on-surface mb-2">Stack &amp; architecture</h3>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="tech-badge text-on-surface text-sm px-2 py-1 rounded">Vite</span>
+<span class="tech-badge text-on-surface text-sm px-2 py-1 rounded">React</span>
+<span class="tech-badge text-on-surface text-sm px-2 py-1 rounded">PHP</span>
+<span class="tech-badge text-on-surface text-sm px-2 py-1 rounded">Node</span>
+<span class="tech-badge text-on-surface text-sm px-2 py-1 rounded">Playwright</span>
+<span class="tech-badge text-on-surface text-sm px-2 py-1 rounded">Gemini</span>
 </div>
-<h3 class="text-lg md:text-h3 font-h3 text-primary leading-tight">Pet Adoption System</h3>
-<p class="text-body font-body text-on-surface-variant leading-relaxed text-justify">Modular JavaFX application for automated shelter logistics and lifecycle tracking.</p>
-<div class="flex flex-wrap gap-xs">
-<span class="tech-badge text-on-surface font-code-sm text-code-sm px-2 py-1 rounded">JavaFX</span>
-<span class="tech-badge text-on-surface font-code-sm text-code-sm px-2 py-1 rounded">MVC Pattern</span>
-</div>
-<div class="flex flex-wrap gap-sm gap-y-2 mt-auto pt-md border-t border-slate-800/50 w-full">
-<a class="text-primary font-label-caps text-xs hover:underline" href="https://github.com/chewsinai02/petAdoptionSystem" rel="noopener noreferrer" target="_blank">GitHub</a>
-<a class="text-on-surface-variant font-label-caps text-xs hover:text-primary hover:underline" href="https://drive.google.com/file/d/1SwWJpx1kf0JSrPAC9lQC7B3AS9mViWj7/view?usp=drive_link" rel="noopener noreferrer" target="_blank">Demo</a>
-</div>
-</div>
-<div class="md:col-span-6 p-md md:p-lg glass-card rounded-xl overflow-hidden border border-slate-800/80 hover:border-sky-400/25 flex flex-col gap-sm h-full min-h-0 group transition-colors duration-200">
-<div class="flex flex-wrap gap-xs">
-<span class="bg-slate-800 text-secondary font-label-caps px-2 py-1 rounded text-[10px]">LOGISTICS</span>
-<span class="bg-slate-800 text-outline font-label-caps px-2 py-1 rounded text-[10px]">PRIVATE REPO</span>
-</div>
-<h3 class="text-lg md:text-h3 font-h3 text-primary leading-tight">Logistics Billing Automation</h3>
-<p class="text-body font-body text-on-surface-variant leading-relaxed text-justify">Formulas, pricing parameters, and input/output table headers for billing data. <span class="text-on-surface">Private repository</span>—GitHub access for collaborators upon request.</p>
-<div class="flex flex-wrap gap-sm gap-y-2 mt-auto pt-md border-t border-slate-800/50 w-full">
-<a class="text-primary font-label-caps text-xs hover:underline" href="https://github.com/chewsinai02/Len-Billing" rel="noopener noreferrer" target="_blank">GitHub (private)</a>
-<a class="text-on-surface-variant font-label-caps text-xs hover:text-primary hover:underline" href="mailto:chewsinai2002@gmail.com?subject=Logistics%20Billing%20Automation%20%E2%80%94%20private%20repo%20%2F%20discussion">Contact</a>
-<a class="text-on-surface-variant font-label-caps text-xs hover:text-primary hover:underline" href="projects.html#logistics-billing">View on Projects</a>
-</div>
-</div>
-<div class="md:col-span-6 p-md md:p-lg glass-card rounded-xl overflow-hidden border border-slate-800/80 hover:border-sky-400/25 flex flex-col gap-sm h-full min-h-0 group transition-colors duration-200">
-<div class="flex flex-wrap gap-xs">
-<span class="bg-slate-800 text-secondary font-label-caps px-2 py-1 rounded text-[10px]">WMS</span>
-<span class="bg-slate-800 text-outline font-label-caps px-2 py-1 rounded text-[10px]">PRIVATE</span>
-<span class="bg-slate-800 text-primary font-label-caps px-2 py-1 rounded text-[10px] border border-primary/25">EMPLOYER SYSTEM</span>
-</div>
-<h3 class="text-lg md:text-h3 font-h3 text-primary leading-tight">Warehouse Management System</h3>
-<p class="text-body font-body text-on-surface-variant leading-relaxed text-justify">Employer&apos;s existing warehouse product (Java/PHP context). <span class="text-on-surface font-medium">Very small scoped</span> contributions: targeted functions and fixes within the team codebase.</p>
-<div class="flex flex-wrap gap-xs">
-<span class="tech-badge text-on-surface font-code-sm text-code-sm px-2 py-1 rounded">Java</span>
-<span class="tech-badge text-on-surface font-code-sm text-code-sm px-2 py-1 rounded">PHP</span>
-</div>
-<div class="flex flex-wrap gap-sm gap-y-2 mt-auto pt-md border-t border-slate-800/50 w-full">
-<a class="text-primary font-label-caps text-xs hover:underline" href="projects.html#warehouse-wms">View on Projects</a>
-</div>
-</div>
-<div class="md:col-span-6 p-md md:p-lg glass-card rounded-xl overflow-hidden border border-slate-800/80 hover:border-sky-400/25 flex flex-col gap-sm h-full min-h-0 group transition-colors duration-200">
-<div class="flex flex-wrap gap-xs">
-<span class="bg-slate-800 text-secondary font-label-caps px-2 py-1 rounded text-[10px]">SHIPMENTS</span>
-<span class="bg-slate-800 text-outline font-label-caps px-2 py-1 rounded text-[10px]">PRIVATE</span>
-</div>
-<h3 class="text-lg md:text-h3 font-h3 text-primary leading-tight">Lenovo Shipment Email Tool</h3>
-<p class="text-body font-body text-on-surface-variant leading-relaxed text-justify">PHP site for ops: upload shipment rows, pick who gets mail, and edit HTML templates. A cron script sends pre-alerts and reminders when they are due. A small lock file stops the same email going out twice if cron runs overlap. <span class="text-on-surface">Private repository</span>—GitHub access for collaborators upon request.</p>
-<div class="flex flex-wrap gap-sm gap-y-2 mt-auto pt-md border-t border-slate-800/50 w-full">
-<a class="text-primary font-label-caps text-xs hover:underline" href="https://github.com/chewsinai02/OpsShipmentEmailConsole" rel="noopener noreferrer" target="_blank">GitHub (private)</a>
-<a class="text-on-surface-variant font-label-caps text-xs hover:text-primary hover:underline" href="mailto:chewsinai2002@gmail.com?subject=Ops%20Shipment%20Email%20Console%20%E2%80%94%20question">Contact</a>
-<a class="text-on-surface-variant font-label-caps text-xs hover:text-primary hover:underline" href="projects.html#lenovo-shipment-email">View on Projects</a>
-</div>
-</div>
-<div class="md:col-span-12 p-md md:p-lg glass-card rounded-xl overflow-hidden border border-slate-800/80 hover:border-sky-400/25 flex flex-col gap-sm h-full min-h-0 group transition-colors duration-200">
-<div class="flex flex-wrap gap-xs items-center justify-between">
-<div class="flex flex-wrap gap-xs">
-<span class="bg-slate-800 text-secondary font-label-caps px-2 py-1 rounded text-[10px]">MAIL · PDF · AI · MYCEIDS</span>
-<span class="bg-slate-800 text-green-400/90 font-label-caps px-2 py-1 rounded text-[10px] border border-green-800/40">PUBLIC</span>
-</div>
-</div>
-<h3 class="text-lg md:text-h3 font-h3 text-primary leading-tight">AI Mail &amp; Document Pipeline (MyCeids)</h3>
-<p class="text-body font-body text-on-surface-variant leading-relaxed text-justify">End-to-end for teams and bundles: documents enter <span class="text-on-surface">either</span> from <span class="text-on-surface">email attachments</span> (PHP <span class="text-on-surface">email_receiver_system</span>) <span class="text-on-surface">or</span> from <span class="text-on-surface">manual upload</span>—not both required. Supported inputs include <span class="text-on-surface">ZIP</span> and Office/images; the pipeline unpacks where needed, <span class="text-on-surface">converts to PDF</span>, and can <span class="text-on-surface">compress</span> large PDFs before <span class="text-on-surface">Gemini</span> classifies and extracts fields. <span class="text-on-surface">Node + Playwright</span> (headless Chromium) then runs the MyCeids upload steps on the server. Vite + React UI for review and hand-off.</p>
-<div class="flex flex-wrap gap-xs">
-<span class="tech-badge text-on-surface font-code-sm text-code-sm px-2 py-1 rounded">Vite</span>
-<span class="tech-badge text-on-surface font-code-sm text-code-sm px-2 py-1 rounded">React</span>
-<span class="tech-badge text-on-surface font-code-sm text-code-sm px-2 py-1 rounded">PHP</span>
-<span class="tech-badge text-on-surface font-code-sm text-code-sm px-2 py-1 rounded">Gemini</span>
-<span class="tech-badge text-on-surface font-code-sm text-code-sm px-2 py-1 rounded">Playwright</span>
-</div>
-<div class="flex flex-wrap gap-sm gap-y-2 mt-auto pt-md border-t border-slate-800/50 w-full">
+<p class="text-on-surface-variant leading-relaxed mb-6 text-justify">Documents enter via <strong class="text-on-surface">email attachments</strong> or <strong class="text-on-surface">manual upload</strong> (not both required). ZIP and Office files unpack; content converts to PDF, compresses when large, then Gemini extracts fields. Playwright runs headless Chromium to complete MyCeids portal steps. React UI lets users review before hand-off.</p>
+
+<h3 class="font-h3 text-h3 text-on-surface mb-2">Outcome</h3>
+<ul class="text-on-surface-variant space-y-2 mb-6 list-disc list-inside">
+<li>Single pipeline replaces repetitive manual portal entry for structured document batches</li>
+<li>Dual ingestion paths fit both email-driven and ad-hoc upload workflows</li>
+<li>Published user manual and public repo demonstrate operability for reviewers</li>
+</ul>
+<div class="flex flex-wrap gap-4 pt-4 border-t border-slate-800">
 <a class="text-primary font-label-caps text-xs hover:underline" href="https://github.com/chewsinai02/userUploadPortal" rel="noopener noreferrer" target="_blank">GitHub</a>
-<a class="text-on-surface-variant font-label-caps text-xs hover:text-primary hover:underline" href="MyCEIDS_Central_Hub_User_Manual_portfolio.pdf" rel="noopener noreferrer" target="_blank">User manual (PDF)</a>
-<a class="text-on-surface-variant font-label-caps text-xs hover:text-primary hover:underline" href="projects.html#myceids-pipeline">View on Projects</a>
+<a class="text-on-surface-variant font-label-caps text-xs hover:text-primary hover:underline" href="assets/MyCEIDS_Central_Hub_User_Manual_portfolio.pdf" rel="noopener noreferrer" target="_blank">User manual (PDF)</a>
+<a class="text-on-surface-variant font-label-caps text-xs hover:underline" href="projects.html#myceids-pipeline">View on Projects</a>
 </div>
-</div>
-<div class="md:col-span-12 p-md md:p-lg glass-card rounded-xl overflow-hidden border border-slate-800/80 hover:border-sky-400/25 flex flex-col gap-sm h-full min-h-0 group transition-colors duration-200">
-<div class="flex flex-wrap gap-xs">
-<span class="bg-slate-800 text-secondary font-label-caps px-2 py-1 rounded text-[10px]">API</span>
-<span class="bg-slate-800 text-green-400/90 font-label-caps px-2 py-1 rounded text-[10px] border border-green-800/40">PUBLIC</span>
-</div>
-<h3 class="text-lg md:text-h3 font-h3 text-primary leading-tight">API Log Platform</h3>
-<p class="text-body font-body text-on-surface-variant leading-relaxed text-justify">Explains failures (missing fields, timeouts, flaky runs). Users <span class="text-on-surface">re-upload or re-trigger the same JSON</span>—less support load.</p>
-<div class="flex flex-wrap gap-xs">
-<span class="tech-badge text-on-surface font-code-sm px-2 py-1 rounded">JSON replay</span>
-<span class="tech-badge text-on-surface font-code-sm px-2 py-1 rounded">Diagnostics</span>
-</div>
-<div class="flex flex-wrap gap-sm gap-y-2 mt-auto pt-md border-t border-slate-800/50 w-full">
-<a class="text-primary font-label-caps text-xs hover:underline" href="https://github.com/chewsinai02/apiLog" rel="noopener noreferrer" target="_blank">GitHub</a>
-<a class="text-on-surface-variant font-label-caps text-xs hover:text-primary hover:underline" href="projects.html#api-log-platform">View on Projects</a>
-</div>
-</div>
-</div>
-</div>
-<div id="professional-context" class="scroll-mt-24 border-t border-slate-800/80 px-5 sm:px-6 lg:px-8 xl:px-10 py-5 md:py-6">
-<div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 lg:gap-10 w-full">
-<div class="min-w-0 flex-1 flex flex-col gap-3">
-<span class="text-label-caps font-label-caps text-primary">PROFESSIONAL CONTEXT</span>
-<h2 class="text-h2 font-h2 text-on-surface text-balance">Professional context</h2>
-<p class="text-body font-body text-on-surface-variant leading-relaxed text-justify hyphens-auto">Logistics Billing Automation, Warehouse Management System, Lenovo Shipment Email Tool, AI Mail &amp; Document Pipeline (MyCeids), and API Log Platform are the same entries as on <a class="text-primary hover:underline font-medium" href="projects.html">Projects</a>, with matching anchors for <a class="text-primary hover:underline font-medium" href="projects.html#logistics-billing">Logistics Billing</a>, <a class="text-primary hover:underline font-medium" href="projects.html#warehouse-wms">WMS</a>, <a class="text-primary hover:underline font-medium" href="projects.html#lenovo-shipment-email">Lenovo Shipment</a>, <a class="text-primary hover:underline font-medium" href="projects.html#myceids-pipeline">MyCeids</a>, and <a class="text-primary hover:underline font-medium" href="projects.html#api-log-platform">API Log Platform</a>. Patient Care Real-Time Management and Pet Adoption System complete the catalog for academic and public portfolio context. Use each card&apos;s GitHub or contact links for private repositories.</p>
-<a class="inline-flex items-center gap-xs bg-primary text-on-primary font-manrope font-bold px-lg py-3 rounded-lg hover:brightness-110 active:scale-95 transition-all no-underline w-fit mt-2" href="mailto:chewsinai2002@gmail.com?subject=Portfolio%20%E2%80%94%20discussion">Discuss this portfolio <span class="material-symbols-outlined text-base">mail</span></a>
-</div>
-<div class="flex flex-col gap-2.5 shrink-0 lg:w-48 xl:w-52 lg:border-l lg:border-slate-800/80 lg:pl-8 lg:pt-1">
-<span class="text-label-caps font-label-caps text-on-surface-variant">On Projects</span>
-<nav class="flex flex-col gap-2 font-manrope text-sm font-medium" aria-label="Projects deep links">
-<a class="text-primary hover:underline" href="projects.html#logistics-billing">Logistics Billing</a>
-<a class="text-primary hover:underline" href="projects.html#warehouse-wms">Warehouse WMS</a>
-<a class="text-primary hover:underline" href="projects.html#lenovo-shipment-email">Lenovo Shipment</a>
-<a class="text-primary hover:underline" href="projects.html#myceids-pipeline">MyCeids pipeline</a>
-<a class="text-primary hover:underline" href="projects.html#api-log-platform">API Log Platform</a>
-</nav>
-</div>
-</div>
-</div>
-</div>
+</article>
+
+<section id="professional-context" class="scroll-mt-28 border border-slate-800 rounded-xl p-6 md:p-8 bg-slate-900/40">
+<h2 class="font-h2 text-h3 text-on-surface mb-3">Professional context</h2>
+<p class="text-on-surface-variant leading-relaxed text-justify mb-4">Employer-associated work (logistics billing, WMS fixes, Lenovo shipment emails) is listed on <a class="text-primary hover:underline" href="projects.html">Projects</a> with confidentiality notes. Those entries reflect scoped contributions inside existing codebases—not greenfield products.</p>
+<a class="inline-flex items-center gap-2 bg-primary text-slate-900 font-label-caps text-sm px-6 py-3 rounded-lg font-bold no-underline hover:brightness-110" href="mailto:chewsinai2002@gmail.com?subject=Portfolio%20discussion">Discuss this portfolio <span class="material-symbols-outlined text-base">mail</span></a>
+</section>
 </main>
-<!-- Footer Component (from COMPONENTS_18) -->
-<footer class="bg-slate-950 w-full py-12 mt-12 md:mt-16 border-t border-slate-900">
-<div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-lg flex flex-col md:flex-row justify-between items-center gap-6">
+
+<footer class="mt-auto w-full bg-slate-950 py-12 px-6 md:px-12 border-t border-slate-900">
+<div class="max-w-[1280px] mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex flex-col gap-1 items-center md:items-start text-center md:text-left">
 <a class="text-lg font-black text-slate-50 font-manrope hover:text-sky-300 transition-colors" href="index.html">Chew Sin Ai</a>
-<div class="font-manrope text-xs uppercase tracking-widest text-slate-500">© 2026 Modern Architect Portfolio. Built with Precision.</div>
-<div class="flex gap-8">
-<a class="font-manrope text-xs uppercase tracking-widest text-slate-500 hover:text-sky-400 transition-colors duration-300 opacity-80 hover:opacity-100 no-underline" href="https://www.linkedin.com/in/chewsinai02" rel="noopener noreferrer" target="_blank">LinkedIn</a>
-<a class="font-manrope text-xs uppercase tracking-widest text-slate-500 hover:text-sky-400 transition-colors duration-300 opacity-80 hover:opacity-100 no-underline" href="https://github.com/chewsinai02" rel="noopener noreferrer" target="_blank">GitHub</a>
-<a class="font-manrope text-xs uppercase tracking-widest text-slate-500 hover:text-sky-400 transition-colors duration-300 opacity-80 hover:opacity-100 no-underline" href="https://github.com/chewsinai02/portfolio" rel="noopener noreferrer" target="_blank">Source Code</a>
-<a class="font-manrope text-xs uppercase tracking-widest text-slate-500 hover:text-sky-400 transition-colors duration-300 opacity-80 hover:opacity-100 no-underline" href="mailto:chewsinai2002@gmail.com?subject=Privacy%20inquiry">Privacy</a>
+<p class="font-manrope text-xs uppercase tracking-widest text-slate-500">&copy; 2026 Chew Sin Ai</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="font-manrope text-xs uppercase tracking-widest text-slate-500 hover:text-sky-400 transition-colors no-underline" href="https://www.linkedin.com/in/chew-s-41810a121" rel="noopener noreferrer" target="_blank">LinkedIn</a>
+<a class="font-manrope text-xs uppercase tracking-widest text-slate-500 hover:text-sky-400 transition-colors no-underline" href="https://github.com/chewsinai02" rel="noopener noreferrer" target="_blank">GitHub</a>
+<a class="font-manrope text-xs uppercase tracking-widest text-slate-500 hover:text-sky-400 transition-colors no-underline" href="https://github.com/chewsinai02/portfolio" rel="noopener noreferrer" target="_blank">Source Code</a>
+<a class="font-manrope text-xs uppercase tracking-widest text-slate-500 hover:text-sky-400 transition-colors no-underline" href="privacy.html">Privacy</a>
 </div>
 </div>
 </footer>
-<script>
-(function () {
-  function copyPageLink() {
-    var url = window.location.href;
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(url);
-    } else {
-      window.prompt("Copy this link:", url);
-    }
-  }
-  document.querySelectorAll("[data-copy-page-link]").forEach(function (el) {
-    el.addEventListener("click", copyPageLink);
-  });
-})();
-</script>
-</body></html>
+<script src="assets/site.js"></script>
+</body>
+</html>
