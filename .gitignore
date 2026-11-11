@@ -1,2 +1,7 @@
 # Confidential enterprise manuals (NDA protected)
 USER_MANUAL_v2.pdf
+
+# Microsoft Office temporary lock files
+~$*.docx
+~$*.pptx
+~$*.xlsx
