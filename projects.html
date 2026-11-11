@@ -79,9 +79,39 @@
         class="flex items-center justify-center w-9 h-9 rounded-lg bg-sky-500/10 hover:bg-sky-500/20 text-sky-400 border border-sky-400/30 transition-all cursor-pointer">
         <span class="material-symbols-outlined text-lg">sports_esports</span>
       </button>
-      <a class="bg-sky-400 hover:bg-sky-300 text-slate-950 font-manrope font-bold text-xs uppercase tracking-wider px-4 py-2 rounded-lg transition-all"
-        href="https://drive.google.com/file/d/1fuY4DvwW3KRiucmMZ1CRulHg6cifS1qi/view?usp=drive_link"
-        rel="noopener noreferrer" target="_blank">Resume</a>
+      <!-- Resume / CV Dropdown -->
+      <div class="relative inline-block text-left" data-resume-dropdown>
+        <button type="button" data-resume-dropdown-toggle aria-expanded="false" aria-haspopup="true"
+          class="inline-flex items-center gap-1.5 bg-sky-400 hover:bg-sky-300 text-slate-950 font-manrope font-bold text-xs uppercase tracking-wider px-3.5 py-2 rounded-lg transition-all cursor-pointer shadow-md shadow-sky-400/20">
+          <span>Resume / CV</span>
+          <span class="material-symbols-outlined text-sm dropdown-icon transition-transform duration-200">expand_more</span>
+        </button>
+        <div data-resume-dropdown-menu class="hidden absolute right-0 mt-2 w-56 rounded-xl bg-slate-900/95 backdrop-blur-md border border-slate-800 shadow-2xl p-1.5 z-50">
+          <a href="assets/Resume_Chew_Sin_Ai.pdf" target="_blank" rel="noopener noreferrer"
+            class="flex items-start gap-2.5 px-3 py-2.5 rounded-lg text-slate-200 hover:text-white hover:bg-slate-800 transition-colors group no-underline">
+            <span class="material-symbols-outlined text-sky-400 text-lg mt-0.5 group-hover:scale-110 transition-transform">description</span>
+            <div class="text-left">
+              <div class="text-xs font-bold font-manrope flex items-center gap-1.5">
+                <span>1-Page Resume</span>
+                <span class="px-1.5 py-0.2 rounded bg-sky-500/20 text-sky-300 text-[10px] font-mono">ATS</span>
+              </div>
+              <p class="text-[11px] text-slate-400 mt-0.5 normal-case font-normal">Concise executive summary</p>
+            </div>
+          </a>
+          <div class="h-px bg-slate-800/80 my-1"></div>
+          <a href="assets/CV_Chew_Sin_Ai.pdf" target="_blank" rel="noopener noreferrer"
+            class="flex items-start gap-2.5 px-3 py-2.5 rounded-lg text-slate-200 hover:text-white hover:bg-slate-800 transition-colors group no-underline">
+            <span class="material-symbols-outlined text-emerald-400 text-lg mt-0.5 group-hover:scale-110 transition-transform">article</span>
+            <div class="text-left">
+              <div class="text-xs font-bold font-manrope flex items-center gap-1.5">
+                <span>Full CV</span>
+                <span class="px-1.5 py-0.2 rounded bg-emerald-500/20 text-emerald-300 text-[10px] font-mono">3 Pages</span>
+              </div>
+              <p class="text-[11px] text-slate-400 mt-0.5 normal-case font-normal">Complete career &amp; projects</p>
+            </div>
+          </a>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -611,7 +641,11 @@
           class="hover:text-sky-400 transition-colors">GitHub</a>
         <a href="https://www.linkedin.com/in/sin-ai-c-41810a121" target="_blank" rel="noopener noreferrer"
           class="hover:text-sky-400 transition-colors">LinkedIn</a>
-        <a href="about.html" class="hover:text-sky-400 transition-colors">About &amp; Resume</a>
+        <a href="about.html" class="hover:text-sky-400 transition-colors">About</a>
+        <a href="assets/Resume_Chew_Sin_Ai.pdf" target="_blank" rel="noopener noreferrer"
+          class="hover:text-sky-400 transition-colors">Resume</a>
+        <a href="assets/CV_Chew_Sin_Ai.pdf" target="_blank" rel="noopener noreferrer"
+          class="hover:text-emerald-400 transition-colors">CV</a>
       </div>
     </div>
   </footer>

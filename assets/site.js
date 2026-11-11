@@ -367,4 +367,76 @@
       canvas.appendChild(entity);
     }
   }
+
+  // Resume / CV Dropdown Component Handler
+  var resumeDropdowns = document.querySelectorAll("[data-resume-dropdown]");
+  resumeDropdowns.forEach(function (dropdown) {
+    var toggleBtn = dropdown.querySelector("[data-resume-dropdown-toggle]");
+    var menu = dropdown.querySelector("[data-resume-dropdown-menu]");
+    if (!toggleBtn || !menu) return;
+
+    function openMenu() {
+      menu.classList.remove("hidden");
+      toggleBtn.setAttribute("aria-expanded", "true");
+      var icon = toggleBtn.querySelector(".dropdown-icon");
+      if (icon) icon.style.transform = "rotate(180deg)";
+    }
+
+    function closeMenu() {
+      menu.classList.add("hidden");
+      toggleBtn.setAttribute("aria-expanded", "false");
+      var icon = toggleBtn.querySelector(".dropdown-icon");
+      if (icon) icon.style.transform = "rotate(0deg)";
+    }
+
+    toggleBtn.addEventListener("click", function (e) {
+      e.stopPropagation();
+      var isOpen = !menu.classList.contains("hidden");
+      if (isOpen) {
+        closeMenu();
+      } else {
+        document.querySelectorAll("[data-resume-dropdown-menu]").forEach(function (m) {
+          m.classList.add("hidden");
+        });
+        document.querySelectorAll("[data-resume-dropdown-toggle]").forEach(function (b) {
+          b.setAttribute("aria-expanded", "false");
+          var ic = b.querySelector(".dropdown-icon");
+          if (ic) ic.style.transform = "rotate(0deg)";
+        });
+        openMenu();
+      }
+    });
+
+    menu.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        closeMenu();
+      });
+    });
+  });
+
+  document.addEventListener("click", function (e) {
+    if (!e.target.closest("[data-resume-dropdown]")) {
+      document.querySelectorAll("[data-resume-dropdown-menu]").forEach(function (m) {
+        m.classList.add("hidden");
+      });
+      document.querySelectorAll("[data-resume-dropdown-toggle]").forEach(function (b) {
+        b.setAttribute("aria-expanded", "false");
+        var icon = b.querySelector(".dropdown-icon");
+        if (icon) icon.style.transform = "rotate(0deg)";
+      });
+    }
+  });
+
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") {
+      document.querySelectorAll("[data-resume-dropdown-menu]").forEach(function (m) {
+        m.classList.add("hidden");
+      });
+      document.querySelectorAll("[data-resume-dropdown-toggle]").forEach(function (b) {
+        b.setAttribute("aria-expanded", "false");
+        var icon = b.querySelector(".dropdown-icon");
+        if (icon) icon.style.transform = "rotate(0deg)";
+      });
+    }
+  });
 })();
